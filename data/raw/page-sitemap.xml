@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//www.phrasebank.manchester.ac.uk/wp-content/plugins/wordpress-seo/css/main-sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/</loc>
+		<lastmod>2023-12-01T20:51:34+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/describing-quantities/</loc>
+		<lastmod>2021-10-05T09:06:55+01:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/amazon/</loc>
+		<lastmod>2021-10-05T15:07:35+01:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/10/flag-round-250.png</image:loc>
+			<image:caption><![CDATA[Amazon.co.uk]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/10/flag-round-250-7.png</image:loc>
+			<image:caption><![CDATA[Amazon.it]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/10/flag-round-250-1.png</image:loc>
+			<image:caption><![CDATA[Amazon.com]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/10/flag-round-250-8.png</image:loc>
+			<image:caption><![CDATA[Amazon.fr]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/10/flag-round-250-2.png</image:loc>
+			<image:caption><![CDATA[Amazon.com.au]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/10/flag-round-250-9.png</image:loc>
+			<image:caption><![CDATA[Amazon.nl]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/10/flag-round-250-3.png</image:loc>
+			<image:caption><![CDATA[Amazon.de]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/10/flag-round-250-10.png</image:loc>
+			<image:caption><![CDATA[Amazon.in]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/10/flag-round-250-4.png</image:loc>
+			<image:caption><![CDATA[Amazon.co.jp]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/10/flag-round-250-11.png</image:loc>
+			<image:caption><![CDATA[Amazon.com.br]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/10/flag-round-250-5.png</image:loc>
+			<image:caption><![CDATA[Amazon.ca]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/10/flag-round-250-12.png</image:loc>
+			<image:caption><![CDATA[Amazon.com.mx]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/10/flag-round-250-6.png</image:loc>
+			<image:caption><![CDATA[Amazon.es]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/dr-john-morley/</loc>
+		<lastmod>2022-08-07T20:38:52+01:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/JohnPhoto3-e1402482140565.jpg</image:loc>
+			<image:caption><![CDATA[Dr John Morley]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/introducing-work/</loc>
+		<lastmod>2023-03-30T12:07:20+01:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/reporting-results/</loc>
+		<lastmod>2023-03-30T14:28:55+01:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/writing-conclusions/</loc>
+		<lastmod>2023-03-30T16:12:57+01:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/discussing-findings/</loc>
+		<lastmod>2023-03-30T16:25:03+01:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/being-critical/</loc>
+		<lastmod>2023-03-30T21:28:28+01:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/classifying-and-listing/</loc>
+		<lastmod>2023-03-30T21:43:53+01:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/compare-and-contrast/</loc>
+		<lastmod>2023-03-30T22:04:28+01:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/writing-definitions/</loc>
+		<lastmod>2023-03-31T16:09:43+01:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/referring-to-sources/</loc>
+		<lastmod>2023-03-31T16:55:16+01:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/describing-trends/</loc>
+		<lastmod>2023-03-31T22:18:56+01:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/explaining-cause-and-effect/</loc>
+		<lastmod>2023-03-31T22:42:10+01:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/giving-examples/</loc>
+		<lastmod>2023-03-31T23:05:16+01:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/signalling-transition/</loc>
+		<lastmod>2023-04-02T14:06:16+01:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/writing-about-the-past-2/</loc>
+		<lastmod>2023-04-02T22:17:14+01:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/describing-methods/</loc>
+		<lastmod>2023-04-02T22:20:41+01:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/about-academic-phrasebank/</loc>
+		<lastmod>2023-12-01T20:49:18+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/using-cautious-language/</loc>
+		<lastmod>2025-03-13T16:53:28+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://www.phrasebank.manchester.ac.uk/useful-links/</loc>
+		<lastmod>2025-03-13T17:23:32+00:00</lastmod>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/adobe-pdf-icon.png</image:loc>
+			<image:caption><![CDATA[pdf logo]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://www.phrasebank.manchester.ac.uk/wp-content/uploads/sites/328/2021/09/download_kindle_version_icone.png</image:loc>
+			<image:caption><![CDATA[kindle logo]]></image:caption>
+		</image:image>
+	</url>
+</urlset>
+<!-- XML Sitemap generated by Yoast SEO -->

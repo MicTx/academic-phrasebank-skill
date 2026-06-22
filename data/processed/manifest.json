@@ -1,0 +1,168 @@
+{
+  "source_sitemap_index": "https://www.phrasebank.manchester.ac.uk/sitemap.xml",
+  "sitemaps": [
+    "https://www.phrasebank.manchester.ac.uk/post-sitemap.xml",
+    "https://www.phrasebank.manchester.ac.uk/page-sitemap.xml",
+    "https://www.phrasebank.manchester.ac.uk/category-sitemap.xml",
+    "https://www.phrasebank.manchester.ac.uk/author-sitemap.xml"
+  ],
+  "included": [
+    {
+      "slug": "introducing-work",
+      "title": "Introducing work",
+      "url": "https://www.phrasebank.manchester.ac.uk/introducing-work/",
+      "group_count": 17,
+      "phrase_count": 442
+    },
+    {
+      "slug": "referring-to-sources",
+      "title": "Referring to sources",
+      "url": "https://www.phrasebank.manchester.ac.uk/referring-to-sources/",
+      "group_count": 16,
+      "phrase_count": 336
+    },
+    {
+      "slug": "describing-methods",
+      "title": "Describing methods",
+      "url": "https://www.phrasebank.manchester.ac.uk/describing-methods/",
+      "group_count": 16,
+      "phrase_count": 295
+    },
+    {
+      "slug": "reporting-results",
+      "title": "Reporting results",
+      "url": "https://www.phrasebank.manchester.ac.uk/reporting-results/",
+      "group_count": 14,
+      "phrase_count": 223
+    },
+    {
+      "slug": "discussing-findings",
+      "title": "Discussing findings",
+      "url": "https://www.phrasebank.manchester.ac.uk/discussing-findings/",
+      "group_count": 13,
+      "phrase_count": 227
+    },
+    {
+      "slug": "writing-conclusions",
+      "title": "Writing conclusions",
+      "url": "https://www.phrasebank.manchester.ac.uk/writing-conclusions/",
+      "group_count": 8,
+      "phrase_count": 179
+    },
+    {
+      "slug": "being-critical",
+      "title": "Being critical",
+      "url": "https://www.phrasebank.manchester.ac.uk/being-critical/",
+      "group_count": 8,
+      "phrase_count": 196
+    },
+    {
+      "slug": "classifying-and-listing",
+      "title": "Classifying and listing",
+      "url": "https://www.phrasebank.manchester.ac.uk/classifying-and-listing/",
+      "group_count": 5,
+      "phrase_count": 82
+    },
+    {
+      "slug": "compare-and-contrast",
+      "title": "Compare and contrast",
+      "url": "https://www.phrasebank.manchester.ac.uk/compare-and-contrast/",
+      "group_count": 6,
+      "phrase_count": 75
+    },
+    {
+      "slug": "describing-quantities",
+      "title": "Describing quantities",
+      "url": "https://www.phrasebank.manchester.ac.uk/describing-quantities/",
+      "group_count": 5,
+      "phrase_count": 73
+    },
+    {
+      "slug": "describing-trends",
+      "title": "Describing trends",
+      "url": "https://www.phrasebank.manchester.ac.uk/describing-trends/",
+      "group_count": 4,
+      "phrase_count": 61
+    },
+    {
+      "slug": "explaining-cause-and-effect",
+      "title": "Explaining causality",
+      "url": "https://www.phrasebank.manchester.ac.uk/explaining-cause-and-effect/",
+      "group_count": 9,
+      "phrase_count": 103
+    },
+    {
+      "slug": "giving-examples",
+      "title": "Giving examples",
+      "url": "https://www.phrasebank.manchester.ac.uk/giving-examples/",
+      "group_count": 3,
+      "phrase_count": 42
+    },
+    {
+      "slug": "signalling-transition",
+      "title": "Signalling transition",
+      "url": "https://www.phrasebank.manchester.ac.uk/signalling-transition/",
+      "group_count": 7,
+      "phrase_count": 77
+    },
+    {
+      "slug": "using-cautious-language",
+      "title": "Being cautious",
+      "url": "https://www.phrasebank.manchester.ac.uk/using-cautious-language/",
+      "group_count": 8,
+      "phrase_count": 106
+    },
+    {
+      "slug": "writing-about-the-past-2",
+      "title": "Writing about the past",
+      "url": "https://www.phrasebank.manchester.ac.uk/writing-about-the-past-2/",
+      "group_count": 4,
+      "phrase_count": 49
+    },
+    {
+      "slug": "writing-definitions",
+      "title": "Defining terms",
+      "url": "https://www.phrasebank.manchester.ac.uk/writing-definitions/",
+      "group_count": 8,
+      "phrase_count": 121
+    }
+  ],
+  "excluded": [
+    {
+      "slug": "useful-links",
+      "url": "https://www.phrasebank.manchester.ac.uk/useful-links/"
+    },
+    {
+      "slug": "about-academic-phrasebank",
+      "url": "https://www.phrasebank.manchester.ac.uk/about-academic-phrasebank/"
+    },
+    {
+      "slug": "2021/08/26/testing",
+      "url": "https://www.phrasebank.manchester.ac.uk/2021/08/26/testing/"
+    },
+    {
+      "slug": "",
+      "url": "https://www.phrasebank.manchester.ac.uk/"
+    },
+    {
+      "slug": "author/humwebteam",
+      "url": "https://www.phrasebank.manchester.ac.uk/author/humwebteam/"
+    },
+    {
+      "slug": "dr-john-morley",
+      "url": "https://www.phrasebank.manchester.ac.uk/dr-john-morley/"
+    },
+    {
+      "slug": "author/mtfssjes",
+      "url": "https://www.phrasebank.manchester.ac.uk/author/mtfssjes/"
+    },
+    {
+      "slug": "amazon",
+      "url": "https://www.phrasebank.manchester.ac.uk/amazon/"
+    },
+    {
+      "slug": "category/uncategorised",
+      "url": "https://www.phrasebank.manchester.ac.uk/category/uncategorised/"
+    }
+  ]
+}
