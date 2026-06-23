@@ -1,4 +1,4 @@
 interface:
   display_name: "SCI Academic Writing"
-  short_description: "Multi-level SCI writing and revision"
-  default_prompt: "Use $sci-academic-writing to rewrite, polish, and structurally revise my SCI manuscript at section, paragraph, and sentence levels."
+  short_description: "Multi-level SCI editing and style unification"
+  default_prompt: "Use $sci-academic-writing to line-edit, polish, and unify the style of my SCI manuscript across structure, paragraphs, and sentences."

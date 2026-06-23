@@ -1,6 +1,6 @@
 ---
 name: sci-academic-writing
-description: SCI academic manuscript writing, rewriting, polishing, and multi-level revision support using a locally compiled Manchester Academic Phrasebank reference set. Use when drafting, rewriting, polishing, restructuring, translating, diagnosing, or peer-reviewing English research manuscripts at manuscript, section, paragraph, sentence, and phrase levels, especially introductions, literature reviews, methods, results, discussions, conclusions, definitions, cautious claims, critical comparison, trends, quantities, causality, examples, transitions, and past-tense reporting.
+description: SCI academic manuscript writing, rewriting, polishing, style-unifying, and multi-level revision support using a locally compiled Manchester Academic Phrasebank reference set. Use when drafting, rewriting, polishing, line-editing, unifying writing style, restructuring, translating, diagnosing, or peer-reviewing English research manuscripts at manuscript, section, paragraph, sentence, and phrase levels, especially introductions, literature reviews, methods, results, discussions, conclusions, definitions, cautious claims, critical comparison, trends, quantities, causality, examples, transitions, and past-tense reporting.
 ---
 
 # SCI Academic Writing
@@ -9,19 +9,20 @@ Use this skill to write, rewrite, polish, or revise SCI-style academic English w
 
 ## Workflow
 
-1. Identify the manuscript task: draft, rewrite, polish, restructure, translate, condense, expand, diagnose, or peer-review.
+1. Identify the manuscript task: draft, rewrite, polish, line-edit, unify style, restructure, translate, condense, expand, diagnose, or peer-review.
 2. Identify the required granularity: whole manuscript, section, paragraph, sentence, phrase, or mixed-level revision.
 3. Read `references/index.md`, then load only the relevant framework and phrasebank reference files.
 4. For revision or polishing, apply the highest necessary level first: manuscript architecture, section function, paragraph logic, sentence expression, then word choice.
-5. Extract the rhetorical moves and phrase patterns needed for the task.
-6. Produce fluent manuscript prose adapted to the user's claim, evidence, field, target journal style, and requested intervention depth.
-7. Check that the output is not a stitched list of template phrases and that claims remain appropriately cautious.
+5. For full-text or multi-section work, build a style profile before rewriting and run a final consistency sweep after sentence-level edits.
+6. Extract the rhetorical moves and phrase patterns needed for the task.
+7. Produce fluent manuscript prose adapted to the user's claim, evidence, field, target journal style, requested intervention depth, and style profile.
+8. Check that the output is not a stitched list of template phrases, claims remain appropriately cautious, and terminology, tense, citation stance, hedging, and sentence rhythm are consistent across the manuscript.
 
 ## Reference Routing
 
 Start with `references/index.md` for the full map.
 
-Load `references/revision-framework.md` whenever the user asks for rewriting, polishing, language editing, comprehensive revision, manuscript diagnosis, paragraph logic, sentence-level improvement, or multi-level work across structure, paragraphs, and expression.
+Load `references/revision-framework.md` whenever the user asks for rewriting, polishing, line editing, language editing, comprehensive revision, manuscript diagnosis, paragraph logic, sentence-level improvement, style unification, consistency checking, or multi-level work across structure, paragraphs, and expression.
 
 Load core section files when the user names a manuscript section:
 
@@ -60,6 +61,7 @@ Use `references/source-coverage.md` only when verifying source coverage or prove
 - For non-native drafts, repair grammar and flow without erasing technical specificity.
 - For comprehensive revision, do not jump straight to sentence polishing when structure, section function, paragraph logic, or evidence linkage is weak.
 - Make the intervention level explicit when useful: structure, section, paragraph, sentence, or phrase.
+- For full-text polishing, enforce consistency in terminology, abbreviations, tense, voice, citation stance, hedging strength, paragraph openings, and sentence rhythm.
 
 ## Output Modes
 
@@ -70,6 +72,8 @@ For revision, preserve the original structure when it is sound; otherwise, brief
 For comprehensive or whole-manuscript revision, work in passes: diagnose the document hierarchy, fix the highest-impact structural and logical issues first, then polish paragraph flow, sentence expression, and word choice.
 
 For sentence-level polishing, improve clarity, grammar, concision, stance, cohesion, and academic register without changing the scientific meaning.
+
+For full-text style unification, provide either a final unified version or a targeted consistency report plus edits, depending on the user's requested output.
 
 For diagnostics, report the highest-impact writing issues first: claim strength, logic, section function, cohesion, citation stance, and phrase-level clarity.
 

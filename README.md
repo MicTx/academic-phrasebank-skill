@@ -17,7 +17,7 @@ mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
 cp -R sci-academic-writing "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
-After installation, invoke it with `$sci-academic-writing` for SCI manuscript drafting, rewriting, polishing, structural revision, paragraph logic repair, and sentence-level editing.
+After installation, invoke it with `$sci-academic-writing` for SCI manuscript drafting, rewriting, polishing, line editing, full-text style unification, structural revision, paragraph logic repair, and sentence-level editing.
 
 ## Rebuild
 

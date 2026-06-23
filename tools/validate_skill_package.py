@@ -29,6 +29,8 @@ REQUIRED_DESCRIPTION_TERMS = [
     "writing",
     "rewriting",
     "polishing",
+    "style-unifying",
+    "line-editing",
     "multi-level revision",
     "manuscript",
     "section",
@@ -44,8 +46,21 @@ REQUIRED_FRAMEWORK_HEADINGS = [
     "## Pass 3: Paragraph Logic",
     "## Pass 4: Sentence Expression",
     "## Pass 5: Phrase And Register",
+    "## Style Profile",
+    "## Pass 6: Full-Text Consistency Sweep",
     "## Output Patterns",
     "## Quality Gate",
+]
+
+REQUIRED_STYLE_TERMS = [
+    "terminology",
+    "abbreviations",
+    "tense",
+    "voice",
+    "citation stance",
+    "hedging strength",
+    "sentence rhythm",
+    "contribution claims",
 ]
 
 
@@ -97,7 +112,7 @@ def validate_openai_metadata() -> None:
     short_description = match.group(1)
     if not 25 <= len(short_description) <= 64:
         fail("agents/openai.yaml short_description must be 25-64 characters")
-    for term in ["rewrite", "polish", "paragraph", "sentence"]:
+    for term in ["line-edit", "polish", "style", "paragraph", "sentence"]:
         if term not in metadata.lower():
             fail(f"agents/openai.yaml missing practical capability term: {term}")
 
@@ -120,6 +135,10 @@ def validate_references() -> None:
     for heading in REQUIRED_FRAMEWORK_HEADINGS:
         if heading not in framework_text:
             fail(f"revision framework missing heading: {heading}")
+    framework_lower = framework_text.lower()
+    missing_style_terms = [term for term in REQUIRED_STYLE_TERMS if term not in framework_lower]
+    if missing_style_terms:
+        fail(f"revision framework missing style consistency terms: {', '.join(missing_style_terms)}")
 
     manifest = json.loads(read(MANIFEST_PATH))
     included = manifest.get("included", [])
