@@ -13,9 +13,13 @@ This repository contains the `sci-academic-writing` Codex skill, built from the 
 ## Install
 
 ```bash
-mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R sci-academic-writing "${CODEX_HOME:-$HOME/.codex}/skills/"
+./install.sh
 ```
+
+The installer copies the skill to both Codex and Claude Code by default:
+
+- Codex: `${CODEX_SKILLS_DIR:-${CODEX_HOME:-$HOME/.codex}/skills}`
+- Claude Code: `${CLAUDE_SKILLS_DIR:-${CLAUDE_HOME:-$HOME/.claude}/skills}`
 
 After installation, invoke it with `$sci-academic-writing` for SCI manuscript drafting, rewriting, polishing, line editing, full-text style unification, structural revision, paragraph logic repair, and sentence-level editing.
 

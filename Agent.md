@@ -9,3 +9,4 @@
 - 2026-06-23: This Codex CLI's `codex exec` does not support `--ask-for-approval`; use `-s danger-full-access` or `--dangerously-bypass-approvals-and-sandbox` when a non-interactive forward test needs full access.
 - 2026-06-23: Treat a skill as complete only after checking trigger metadata, `agents/openai.yaml`, install instructions, reference routing, custom non-generated references, offline package audit, builder reproducibility, and at least one realistic forward-test output.
 - 2026-06-23: After editing a skill that is also installed under `$CODEX_HOME/skills`, sync the installed copy before forward-testing; otherwise the test may load the previous installed version and give false confidence.
+- 2026-06-23: Ship skill repos with an executable `install.sh` that installs to both `${CODEX_HOME:-$HOME/.codex}/skills` and `${CLAUDE_HOME:-$HOME/.claude}/skills`, while allowing `CODEX_SKILLS_DIR` and `CLAUDE_SKILLS_DIR` overrides for safe tests.

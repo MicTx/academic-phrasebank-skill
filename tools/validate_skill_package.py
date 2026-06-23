@@ -16,6 +16,7 @@ MANIFEST_PATH = ROOT / "data" / "processed" / "manifest.json"
 
 REQUIRED_SKILL_FILES = [
     ROOT / "README.md",
+    ROOT / "install.sh",
     SKILL_DIR / "SKILL.md",
     SKILL_DIR / "agents" / "openai.yaml",
     REF_DIR / "index.md",
@@ -119,12 +120,22 @@ def validate_openai_metadata() -> None:
 
 def validate_repository_guidance() -> None:
     readme = read(ROOT / "README.md")
-    for text in ["## Install", "$sci-academic-writing", "tools/validate_skill_package.py"]:
+    for text in ["## Install", "./install.sh", "$sci-academic-writing", "tools/validate_skill_package.py"]:
         if text not in readme:
             fail(f"README.md missing guidance: {text}")
     builder = read(ROOT / "tools" / "build_phrasebank_refs.py")
     if 'REF_DIR.glob("*.md")' in builder:
         fail("builder must not delete every reference markdown file")
+
+
+def validate_installer() -> None:
+    installer = ROOT / "install.sh"
+    if not installer.stat().st_mode & 0o111:
+        fail("install.sh must be executable")
+    installer_text = read(installer)
+    for text in ["sci-academic-writing", "CODEX_SKILLS_DIR", "CLAUDE_SKILLS_DIR", "CODEX_HOME", "CLAUDE_HOME"]:
+        if text not in installer_text:
+            fail(f"install.sh missing installer term: {text}")
 
 
 def validate_references() -> None:
@@ -172,6 +183,7 @@ def main() -> int:
     validate_skill_metadata()
     validate_openai_metadata()
     validate_repository_guidance()
+    validate_installer()
     validate_references()
     validate_no_unresolved_markers()
     print("Skill package audit passed.")
