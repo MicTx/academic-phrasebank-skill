@@ -6,7 +6,9 @@ from __future__ import annotations
 import html
 import json
 import re
+import shutil
 import sys
+import tempfile
 import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -95,6 +97,14 @@ def fetch(url: str) -> str:
         raise RuntimeError(f"failed to fetch {url}: {exc}") from exc
 
 
+def normalise_raw_html(text: str) -> str:
+    text = re.sub(r'"token":"[^"]+"', '"token":"<token>"', text)
+    text = re.sub(r'"et_frontend_nonce":"[^"]+"', '"et_frontend_nonce":"<nonce>"', text)
+    text = re.sub(r'"et_ab_log_nonce":"[^"]+"', '"et_ab_log_nonce":"<nonce>"', text)
+    text = re.sub(r"hid=[A-F0-9]+", "hid=<hid>", text)
+    return text
+
+
 def slug_from_url(url: str) -> str:
     path = re.sub(r"^https?://[^/]+", "", url).strip("/")
     return path
@@ -135,9 +145,9 @@ def sitemap_name(url: str) -> str:
     return name if name.endswith(".xml") else f"{name}.xml"
 
 
-def collect_sitemap_urls() -> tuple[list[str], list[str]]:
+def collect_sitemap_urls(raw_dir: Path) -> tuple[list[str], list[str]]:
     index_text = fetch(SITEMAP_INDEX_URL)
-    (RAW_DIR / "sitemap.xml").write_text(index_text, encoding="utf-8")
+    (raw_dir / "sitemap.xml").write_text(index_text, encoding="utf-8")
     index_root = ET.fromstring(index_text)
     namespace = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
     sitemap_urls = [loc.text.strip() for loc in index_root.findall(".//sm:loc", namespace) if loc.text]
@@ -147,7 +157,7 @@ def collect_sitemap_urls() -> tuple[list[str], list[str]]:
     urls = []
     for sitemap_url in sitemap_urls:
         xml_text = fetch(sitemap_url)
-        (RAW_DIR / sitemap_name(sitemap_url)).write_text(xml_text, encoding="utf-8")
+        (raw_dir / sitemap_name(sitemap_url)).write_text(xml_text, encoding="utf-8")
         root = ET.fromstring(xml_text)
         for loc in root.findall(".//sm:loc", namespace):
             if loc.text and loc.text.startswith(BASE_URL):
@@ -200,10 +210,10 @@ def extract_title(page_html: str, slug: str) -> str:
     return slug.replace("-", " ").title()
 
 
-def extract_page(url: str) -> PageContent:
+def extract_page(url: str, raw_dir: Path) -> PageContent:
     slug = slug_from_url(url)
     page_html = fetch(url)
-    (RAW_DIR / f"{slug.replace('/', '-') or 'home'}.html").write_text(page_html, encoding="utf-8")
+    (raw_dir / f"{slug.replace('/', '-') or 'home'}.html").write_text(normalise_raw_html(page_html), encoding="utf-8")
     main_match = re.search(r'<div class="entry-content">(.*?)</article>', page_html, flags=re.I | re.S)
     main_html = main_match.group(1) if main_match else page_html
     return PageContent(
@@ -216,6 +226,8 @@ def extract_page(url: str) -> PageContent:
 
 
 def md_escape(text: str) -> str:
+    text = text.replace("XXXXX", "X")
+    text = re.sub(r"\bbook X\s*,", "book on X,", text)
     return text.replace("\n", " ").strip()
 
 
@@ -297,6 +309,10 @@ def write_index(pages: list[PageContent]) -> None:
         "",
         "Load only the file that matches the manuscript task. Use these references as phrase-pattern evidence, not as text to paste wholesale.",
         "",
+        "## Revision Framework",
+        "",
+        "- `revision-framework.md`: Multi-level manuscript rewriting, polishing, restructuring, diagnosis, paragraph logic repair, sentence-level editing, and full-manuscript revision workflow.",
+        "",
         "## Core Manuscript Sections",
         "",
     ]
@@ -319,31 +335,42 @@ def main() -> int:
     RAW_DIR.mkdir(parents=True, exist_ok=True)
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     REF_DIR.mkdir(parents=True, exist_ok=True)
-    for old_file in [*RAW_DIR.glob("*.html"), *RAW_DIR.glob("*.xml")]:
-        old_file.unlink()
-    urls, sitemap_urls = collect_sitemap_urls()
-    included_urls = [url for url in urls if slug_from_url(url) in SECTION_ORDER]
-    excluded_urls = [url for url in urls if slug_from_url(url) in EXCLUDED_SLUGS]
-    unknown_urls = [url for url in urls if slug_from_url(url) not in SECTION_ORDER and slug_from_url(url) not in EXCLUDED_SLUGS]
-    if unknown_urls:
-        print("Unknown sitemap URLs require classification:", file=sys.stderr)
-        for url in unknown_urls:
-            print(f"- {url}", file=sys.stderr)
-        return 2
+    with tempfile.TemporaryDirectory(prefix="phrasebank-build-") as temp_dir_name:
+        temp_root = Path(temp_dir_name)
+        temp_raw_dir = temp_root / "raw"
+        temp_raw_dir.mkdir()
 
-    pages = order_pages(extract_page(url) for url in included_urls)
-    missing_groups = [page.slug for page in pages if not page.groups]
-    if missing_groups:
-        print(f"Pages without phrase groups: {', '.join(missing_groups)}", file=sys.stderr)
-        return 3
+        urls, sitemap_urls = collect_sitemap_urls(temp_raw_dir)
+        included_urls = [url for url in urls if slug_from_url(url) in SECTION_ORDER]
+        excluded_urls = sorted(url for url in urls if slug_from_url(url) in EXCLUDED_SLUGS)
+        unknown_urls = [url for url in urls if slug_from_url(url) not in SECTION_ORDER and slug_from_url(url) not in EXCLUDED_SLUGS]
+        if unknown_urls:
+            print("Unknown sitemap URLs require classification:", file=sys.stderr)
+            for url in unknown_urls:
+                print(f"- {url}", file=sys.stderr)
+            return 2
 
-    for old_file in REF_DIR.glob("*.md"):
-        old_file.unlink()
-    write_index(pages)
-    write_catalog(pages, excluded_urls, sitemap_urls)
-    for page in pages:
-        write_page_reference(page)
-    write_manifest(pages, excluded_urls, sitemap_urls)
+        pages = order_pages(extract_page(url, temp_raw_dir) for url in included_urls)
+        missing_groups = [page.slug for page in pages if not page.groups]
+        if missing_groups:
+            print(f"Pages without phrase groups: {', '.join(missing_groups)}", file=sys.stderr)
+            return 3
+
+        for old_file in [*RAW_DIR.glob("*.html"), *RAW_DIR.glob("*.xml")]:
+            old_file.unlink()
+        for built_file in temp_raw_dir.iterdir():
+            shutil.copy2(built_file, RAW_DIR / built_file.name)
+
+        generated_reference_files = [REF_DIR / "index.md", REF_DIR / "source-coverage.md"]
+        generated_reference_files.extend(REF_DIR / f"{page.slug}.md" for page in pages)
+        for old_file in generated_reference_files:
+            if old_file.exists():
+                old_file.unlink()
+        write_index(pages)
+        write_catalog(pages, excluded_urls, sitemap_urls)
+        for page in pages:
+            write_page_reference(page)
+        write_manifest(pages, excluded_urls, sitemap_urls)
     print(f"Wrote {len(pages)} page references to {REF_DIR}")
     print(f"Total phrase lines: {sum(len(group.phrases) for page in pages for group in page.groups)}")
     return 0

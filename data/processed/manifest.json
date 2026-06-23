@@ -129,40 +129,40 @@
   ],
   "excluded": [
     {
-      "slug": "useful-links",
-      "url": "https://www.phrasebank.manchester.ac.uk/useful-links/"
-    },
-    {
-      "slug": "about-academic-phrasebank",
-      "url": "https://www.phrasebank.manchester.ac.uk/about-academic-phrasebank/"
+      "slug": "",
+      "url": "https://www.phrasebank.manchester.ac.uk/"
     },
     {
       "slug": "2021/08/26/testing",
       "url": "https://www.phrasebank.manchester.ac.uk/2021/08/26/testing/"
     },
     {
-      "slug": "",
-      "url": "https://www.phrasebank.manchester.ac.uk/"
-    },
-    {
-      "slug": "author/humwebteam",
-      "url": "https://www.phrasebank.manchester.ac.uk/author/humwebteam/"
-    },
-    {
-      "slug": "dr-john-morley",
-      "url": "https://www.phrasebank.manchester.ac.uk/dr-john-morley/"
-    },
-    {
-      "slug": "author/mtfssjes",
-      "url": "https://www.phrasebank.manchester.ac.uk/author/mtfssjes/"
+      "slug": "about-academic-phrasebank",
+      "url": "https://www.phrasebank.manchester.ac.uk/about-academic-phrasebank/"
     },
     {
       "slug": "amazon",
       "url": "https://www.phrasebank.manchester.ac.uk/amazon/"
     },
     {
+      "slug": "author/humwebteam",
+      "url": "https://www.phrasebank.manchester.ac.uk/author/humwebteam/"
+    },
+    {
+      "slug": "author/mtfssjes",
+      "url": "https://www.phrasebank.manchester.ac.uk/author/mtfssjes/"
+    },
+    {
       "slug": "category/uncategorised",
       "url": "https://www.phrasebank.manchester.ac.uk/category/uncategorised/"
+    },
+    {
+      "slug": "dr-john-morley",
+      "url": "https://www.phrasebank.manchester.ac.uk/dr-john-morley/"
+    },
+    {
+      "slug": "useful-links",
+      "url": "https://www.phrasebank.manchester.ac.uk/useful-links/"
     }
   ]
 }

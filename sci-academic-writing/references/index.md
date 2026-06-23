@@ -2,6 +2,10 @@
 
 Load only the file that matches the manuscript task. Use these references as phrase-pattern evidence, not as text to paste wholesale.
 
+## Revision Framework
+
+- `revision-framework.md`: Multi-level manuscript rewriting, polishing, restructuring, diagnosis, paragraph logic repair, sentence-level editing, and full-manuscript revision workflow.
+
 ## Core Manuscript Sections
 
 - `introducing-work.md`: Introducing work

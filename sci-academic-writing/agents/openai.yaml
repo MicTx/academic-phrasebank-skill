@@ -1,4 +1,4 @@
 interface:
   display_name: "SCI Academic Writing"
-  short_description: "Phrasebank-guided SCI manuscript writing"
-  default_prompt: "Use $sci-academic-writing to draft and revise SCI manuscript sections with disciplined phrase choices."
+  short_description: "Multi-level SCI writing and revision"
+  default_prompt: "Use $sci-academic-writing to rewrite, polish, and structurally revise my SCI manuscript at section, paragraph, and sentence levels."

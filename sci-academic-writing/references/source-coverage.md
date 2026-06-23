@@ -33,12 +33,12 @@ Fetched pages: 17 writing pages
 
 ## Excluded Non-Writing Pages
 
-- `useful-links`: https://www.phrasebank.manchester.ac.uk/useful-links/
-- `about-academic-phrasebank`: https://www.phrasebank.manchester.ac.uk/about-academic-phrasebank/
-- `2021/08/26/testing`: https://www.phrasebank.manchester.ac.uk/2021/08/26/testing/
 - `home`: https://www.phrasebank.manchester.ac.uk/
-- `author/humwebteam`: https://www.phrasebank.manchester.ac.uk/author/humwebteam/
-- `dr-john-morley`: https://www.phrasebank.manchester.ac.uk/dr-john-morley/
-- `author/mtfssjes`: https://www.phrasebank.manchester.ac.uk/author/mtfssjes/
+- `2021/08/26/testing`: https://www.phrasebank.manchester.ac.uk/2021/08/26/testing/
+- `about-academic-phrasebank`: https://www.phrasebank.manchester.ac.uk/about-academic-phrasebank/
 - `amazon`: https://www.phrasebank.manchester.ac.uk/amazon/
+- `author/humwebteam`: https://www.phrasebank.manchester.ac.uk/author/humwebteam/
+- `author/mtfssjes`: https://www.phrasebank.manchester.ac.uk/author/mtfssjes/
 - `category/uncategorised`: https://www.phrasebank.manchester.ac.uk/category/uncategorised/
+- `dr-john-morley`: https://www.phrasebank.manchester.ac.uk/dr-john-morley/
+- `useful-links`: https://www.phrasebank.manchester.ac.uk/useful-links/
