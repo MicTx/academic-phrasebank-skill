@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the sci-academic-writing skill package without network access."""
+"""Validate the academic-phrasebank-assistant skill package without network access."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL_DIR = ROOT / "sci-academic-writing"
+SKILL_DIR = ROOT / "academic-phrasebank-assistant"
 REF_DIR = SKILL_DIR / "references"
 MANIFEST_PATH = ROOT / "data" / "processed" / "manifest.json"
 
@@ -93,8 +93,8 @@ def parse_frontmatter(skill_text: str) -> dict[str, str]:
 def validate_skill_metadata() -> None:
     skill_text = read(SKILL_DIR / "SKILL.md")
     frontmatter = parse_frontmatter(skill_text)
-    if frontmatter.get("name") != "sci-academic-writing":
-        fail("SKILL.md frontmatter name must be sci-academic-writing")
+    if frontmatter.get("name") != "academic-phrasebank-assistant":
+        fail("SKILL.md frontmatter name must be academic-phrasebank-assistant")
     description = frontmatter.get("description", "").lower()
     missing_terms = [term for term in REQUIRED_DESCRIPTION_TERMS if term not in description]
     if missing_terms:
@@ -105,8 +105,8 @@ def validate_skill_metadata() -> None:
 
 def validate_openai_metadata() -> None:
     metadata = read(SKILL_DIR / "agents" / "openai.yaml")
-    if "$sci-academic-writing" not in metadata:
-        fail("agents/openai.yaml default_prompt must mention $sci-academic-writing")
+    if "$academic-phrasebank-assistant" not in metadata:
+        fail("agents/openai.yaml default_prompt must mention $academic-phrasebank-assistant")
     match = re.search(r'short_description:\s*"([^"]+)"', metadata)
     if not match:
         fail("agents/openai.yaml missing quoted short_description")
@@ -120,7 +120,7 @@ def validate_openai_metadata() -> None:
 
 def validate_repository_guidance() -> None:
     readme = read(ROOT / "README.md")
-    for text in ["## Install", "./install.sh", "$sci-academic-writing", "tools/validate_skill_package.py"]:
+    for text in ["## Install", "./install.sh", "$academic-phrasebank-assistant", "tools/validate_skill_package.py"]:
         if text not in readme:
             fail(f"README.md missing guidance: {text}")
     builder = read(ROOT / "tools" / "build_phrasebank_refs.py")
@@ -133,7 +133,7 @@ def validate_installer() -> None:
     if not installer.stat().st_mode & 0o111:
         fail("install.sh must be executable")
     installer_text = read(installer)
-    for text in ["sci-academic-writing", "CODEX_SKILLS_DIR", "CLAUDE_SKILLS_DIR", "CODEX_HOME", "CLAUDE_HOME"]:
+    for text in ["academic-phrasebank-assistant", "sci-academic-writing", "CODEX_SKILLS_DIR", "CLAUDE_SKILLS_DIR", "CODEX_HOME", "CLAUDE_HOME"]:
         if text not in installer_text:
             fail(f"install.sh missing installer term: {text}")
 

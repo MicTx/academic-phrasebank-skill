@@ -1,7 +1,8 @@
 #!/bin/sh
 set -eu
 
-SKILL_NAME="sci-academic-writing"
+SKILL_NAME="academic-phrasebank-assistant"
+LEGACY_SKILL_NAME="sci-academic-writing"
 SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 SOURCE_DIR="$SCRIPT_DIR/$SKILL_NAME"
 
@@ -18,6 +19,7 @@ install_skill() {
   target_dir="$target_root/$SKILL_NAME"
 
   mkdir -p "$target_root"
+  rm -rf "$target_root/$LEGACY_SKILL_NAME"
   rm -rf "$target_dir"
   mkdir -p "$target_dir"
 

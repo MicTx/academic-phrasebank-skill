@@ -1,9 +1,9 @@
 ---
-name: sci-academic-writing
+name: academic-phrasebank-assistant
 description: SCI academic manuscript writing, rewriting, polishing, style-unifying, and multi-level revision support using a locally compiled Manchester Academic Phrasebank reference set. Use when drafting, rewriting, polishing, line-editing, unifying writing style, restructuring, translating, diagnosing, or peer-reviewing English research manuscripts at manuscript, section, paragraph, sentence, and phrase levels, especially introductions, literature reviews, methods, results, discussions, conclusions, definitions, cautious claims, critical comparison, trends, quantities, causality, examples, transitions, and past-tense reporting.
 ---
 
-# SCI Academic Writing
+# Academic Phrasebank Assistant
 
 Use this skill to write, rewrite, polish, or revise SCI-style academic English with phrase-pattern support from the Manchester Academic Phrasebank. Treat the bundled phrasebank as a rhetorical pattern library, not as text to paste mechanically.
 
