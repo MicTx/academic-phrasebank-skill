@@ -240,6 +240,19 @@ def validate_generated_reference_text() -> None:
             if pattern.search(text):
                 fail(f"{label} in {path.relative_to(ROOT)}")
 
+    marketing_markers = [
+        "enhanced and expanded version of phrasebank",
+        "phrasebankresearch.net",
+        "download_kindle_version",
+        "/amazon/",
+    ]
+    raw_dir = ROOT / "data" / "raw"
+    for path in raw_dir.glob("*.html"):
+        text = read(path).lower()
+        for marker in marketing_markers:
+            if marker in text:
+                fail(f"marketing/source-promotion residue {marker!r} in {path.relative_to(ROOT)}")
+
 
 def validate_no_unresolved_markers() -> None:
     marker_pattern = re.compile(r"\b(TODO|FIXME|XXXXX|STUB)\b", flags=re.I)

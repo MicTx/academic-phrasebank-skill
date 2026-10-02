@@ -8,6 +8,17 @@ from tools import build_phrasebank_refs as builder
 
 
 class PhrasebankExtractionTests(unittest.TestCase):
+    def test_raw_snapshot_removes_promotion_but_keeps_academic_book_usage(self) -> None:
+        fragment = (
+            '<div>An enhanced and expanded version of PHRASEBANK is available in PDF or Kindle format:</div>\n'
+            '<div><a href="https://www.phrasebank.manchester.ac.uk/amazon/">Kindle</a></div>\n'
+            '<p>Consult a good English grammar book.</p>'
+        )
+        normalized = builder.normalise_raw_html(fragment)
+        self.assertNotIn("enhanced and expanded version", normalized.lower())
+        self.assertNotIn("/amazon/", normalized.lower())
+        self.assertIn("grammar book", normalized)
+
     def test_inline_tags_do_not_split_words(self) -> None:
         fragment = '<p><em>B</em>e<em>ing cautious</em></p>'
         self.assertEqual(builder.strip_tags(fragment), "Being cautious")

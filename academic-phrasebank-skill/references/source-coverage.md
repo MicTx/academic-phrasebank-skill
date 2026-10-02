@@ -36,7 +36,6 @@ Fetched pages: 17 writing pages
 - `home`: https://www.phrasebank.manchester.ac.uk/
 - `2021/08/26/testing`: https://www.phrasebank.manchester.ac.uk/2021/08/26/testing/
 - `about-academic-phrasebank`: https://www.phrasebank.manchester.ac.uk/about-academic-phrasebank/
-- `amazon`: https://www.phrasebank.manchester.ac.uk/amazon/
 - `author/humwebteam`: https://www.phrasebank.manchester.ac.uk/author/humwebteam/
 - `author/mtfssjes`: https://www.phrasebank.manchester.ac.uk/author/mtfssjes/
 - `category/uncategorised`: https://www.phrasebank.manchester.ac.uk/category/uncategorised/
