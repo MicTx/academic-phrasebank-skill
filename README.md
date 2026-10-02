@@ -1,59 +1,60 @@
 # Academic Phrasebank Skill
 
-`academic-phrasebank-skill` is a Codex/Claude skill for evidence-preserving English editing of scientific manuscripts. It supports drafting, translation, rewriting, polishing, structural revision, paragraph repair, diagnosis, and style unification.
+`academic-phrasebank-skill` is a Codex and Claude Code skill for editing English scientific manuscripts. It helps with drafting, translation, rewriting, polishing, structural revision, paragraph repair, diagnosis, and style unification while preserving the author's evidence and scientific meaning.
 
-The skill uses a locally bundled subset of the public Manchester Academic Phrasebank as a rhetorical pattern library. It does not invent citations, statistics, methods, mechanisms, or scientific conclusions.
+## Features
 
-## Install
+- Routes work to manuscript, section, paragraph, sentence, and phrase levels.
+- Preserves numbers, variables, terminology, citations, uncertainty, and evidence strength.
+- Provides section-specific and rhetorical-move-specific Phrasebank references.
+- Keeps user-facing releases free of development-only files and source snapshots.
 
-Run the installer from the project directory:
+## Installation
+
+Run the installer from the repository or a release archive:
 
 ```bash
 ./install.sh
 ```
 
-By default the skill is installed for both Codex and Claude Code:
-
-- Codex: `${CODEX_SKILLS_DIR:-${CODEX_HOME:-$HOME/.codex}/skills}`
-- Claude Code: `${CLAUDE_SKILLS_DIR:-${CLAUDE_HOME:-$HOME/.claude}/skills}`
-
-For an isolated installation test:
+The installer targets both Codex and Claude Code by default. Use environment variables for an isolated installation:
 
 ```bash
-CODEX_SKILLS_DIR=/tmp/phrasebank-codex \
-CLAUDE_SKILLS_DIR=/tmp/phrasebank-claude \
+CODEX_SKILLS_DIR=/tmp/academic-phrasebank-codex \
+CLAUDE_SKILLS_DIR=/tmp/academic-phrasebank-claude \
 ./install.sh
 ```
 
 Invoke the skill as `$academic-phrasebank-skill`.
 
-## What is included
+## Usage
 
-- `academic-phrasebank-skill/SKILL.md`: operating instructions and quality gate.
-- `academic-phrasebank-skill/references/`: section and language-function routing references.
-- `academic-phrasebank-skill/agents/openai.yaml`: Codex display metadata.
-- `NOTICE.md`: project and upstream source attribution.
-- `CHANGELOG.md`: public change history.
+Give the skill the manuscript text and describe the requested intervention. Examples:
 
-## Source attribution
-
-The Phrasebank-derived references come from public Manchester Academic Phrasebank pages. The exact URLs, page list, group counts, and phrase counts are recorded in `academic-phrasebank-skill/references/source-coverage.md`.
-
-The repository's original files are licensed under Apache-2.0. Phrasebank-derived material remains identified as upstream material; see `NOTICE.md` and the official [Academic Phrasebank](https://www.phrasebank.manchester.ac.uk/about-academic-phrasebank/) page before redistributing it.
-
-## User releases
-
-User-facing releases contain the installer, the installable skill, user documentation, attribution, and the changelog. Development notes, tests, evaluation prompts, raw source snapshots, manifests, and build tools remain in the source repository and are not included in the user archive.
-
-Release archives include a commit-derived identifier and a `SHA256SUMS` file. Verify an archive with:
-
-```bash
-tar -tzf academic-phrasebank-skill-<commit>.tar.gz >/dev/null
-unzip -t academic-phrasebank-skill-<commit>.zip
+```text
+$academic-phrasebank-skill Polish this Results paragraph. Preserve every number and citation, and avoid adding interpretation.
 ```
+
+```text
+$academic-phrasebank-skill Rewrite this Discussion section. Separate observed results, interpretation, limitations, and implications.
+```
+
+The skill treats the bundled Phrasebank as a rhetorical pattern library. It does not create references, results, methods, mechanisms, or scientific claims that are absent from the input.
+
+## Reference source
+
+The bundled references are generated from the public [Manchester Academic Phrasebank](https://www.phrasebank.manchester.ac.uk/about-academic-phrasebank/) published by the University of Manchester. The included pages and source URLs are listed in [`academic-phrasebank-skill/references/source-coverage.md`](academic-phrasebank-skill/references/source-coverage.md).
+
+Phrasebank-derived material remains upstream material. See [`NOTICE.md`](NOTICE.md) before redistributing or modifying it.
+
+## Help and contribution
+
+- [`SUPPORT.md`](SUPPORT.md): usage questions and issue reporting.
+- [`SECURITY.md`](SECURITY.md): private vulnerability reporting.
+- [`CHANGELOG.md`](CHANGELOG.md): versioned changes.
+
+Contributors can find `CONTRIBUTING.md` and `DEVELOPMENT.md` in the source repository.
 
 ## License
 
-Original project files are provided under the Apache License, Version 2.0. See `LICENSE`. See `NOTICE.md` for the separate upstream Phrasebank attribution.
-
-Repository maintenance, validation, evaluation, and release construction are documented separately in the source repository.
+Original project code and documentation are licensed under the Apache License, Version 2.0. See [`LICENSE`](LICENSE) and [`NOTICE.md`](NOTICE.md).

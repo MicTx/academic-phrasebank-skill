@@ -1,10 +1,23 @@
 # Changelog
 
-## Unreleased
+This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and uses semantic versioning for public releases.
 
-- Reworked the skill around evidence-preserving manuscript editing and multi-level revision.
-- Rebuilt the Manchester Academic Phrasebank references with inline-HTML and hidden-layout cleanup.
-- Added offline validation, regression tests, deterministic user-release archives, and checksum verification.
-- Added public licensing, attribution, contribution, conduct, and security documentation.
+## [0.1.0] - 2026-10-02
 
-There is no numbered public release yet. Release identifiers are derived from Git commits.
+### Added
+
+- Codex and Claude Code skill for evidence-preserving scientific manuscript editing.
+- Section and rhetorical-function references derived from the public Manchester Academic Phrasebank.
+- Cross-platform installer for Codex and Claude Code.
+- Apache-2.0 project license, source attribution, contribution guide, security policy, and GitHub templates.
+
+### Changed
+
+- Standardized the project and skill name as `academic-phrasebank-skill`.
+- Added deterministic user archives with SHA-256 verification.
+
+### Fixed
+
+- Cleaned malformed inline HTML extraction and hidden layout markers in generated references.
+
+[0.1.0]: https://github.com/MicTx/academic-phrasebank-skill/releases

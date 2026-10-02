@@ -1,22 +1,49 @@
 # Contributing
 
-## Scope
+Thank you for improving Academic Phrasebank Skill. Contributions should make the skill more useful, more accurate, or easier to install and maintain.
 
-Contributions should improve the skill, its reference routing, source attribution, or the reliability of the build and validation tools.
+## Before you start
 
-## Before opening a change
+1. Read the [README](README.md), [Development Guide](DEVELOPMENT.md), and [Code of Conduct](CODE_OF_CONDUCT.md).
+2. Open an issue for substantial behavior changes so the intended user outcome is clear.
+3. Create a topic branch from `main`. Keep unrelated changes in separate branches.
 
-1. Read `README.md` and `DEVELOPMENT.md`.
-2. Keep user-facing behavior and the internal skill name `academic-phrasebank-skill` compatible.
-3. Do not add Phrasebank text without recording its upstream URL and provenance.
-4. Do not add invented citations, examples, statistics, or scientific claims to the skill instructions.
+## Repository areas
 
-## Required checks
+- `academic-phrasebank-skill/`: installable skill, metadata, and reference material.
+- `tools/`: reference builder, package validator, and release builder.
+- `tests/`: offline regression tests for extraction and staging behavior.
+- `data/raw/` and `data/processed/`: generated source snapshots and coverage metadata.
 
-Run the checks documented in `DEVELOPMENT.md`, including the standard skill validator, the project validator, the unit tests, and `git diff --check`.
+## Content rules
 
-If the Phrasebank extractor or generated references change, run a complete rebuild and inspect `data/processed/manifest.json` and `academic-phrasebank-skill/references/source-coverage.md`. Keep `academic-phrasebank-skill/references/revision-framework.md` hand-maintained.
+- Preserve the skill name `academic-phrasebank-skill` and its installation contract.
+- Keep scientific claims, citations, statistics, and uncertainty evidence-preserving.
+- Add source URLs and attribution when changing upstream-derived references.
+- Keep the hand-maintained `academic-phrasebank-skill/references/revision-framework.md` separate from generated files.
+- Do not add credentials, personal data, or unrelated artifacts to the repository or release package.
+
+## Local checks
+
+Run the relevant checks before opening a pull request:
+
+```bash
+python3 /Users/dawud/.agents/skills/skill-creator/scripts/quick_validate.py academic-phrasebank-skill
+python3 tools/validate_skill_package.py
+python3 -m unittest discover -s tests -v
+python3 -m py_compile tools/build_phrasebank_refs.py tools/validate_skill_package.py tools/build_release.py
+git diff --check
+```
+
+If generated references change, run `python3 tools/build_phrasebank_refs.py` and inspect the manifest and source coverage. If the user package changes, run `python3 tools/build_release.py` and verify the archive checksums.
 
 ## Pull requests
 
-Describe the user-facing effect, the affected reference or build path, and the validation performed. Keep generated-source updates separate from unrelated formatting changes when practical.
+Use a clear title and explain:
+
+- the user problem and resulting behavior;
+- the files or reference sources affected;
+- the checks you ran; and
+- any compatibility or attribution considerations.
+
+Keep the pull request focused. Update the changelog when the change affects users.

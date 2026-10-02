@@ -1,16 +1,22 @@
 # Security Policy
 
+## Supported versions
+
+Security fixes target the latest version on the `main` branch and the latest published release.
+
 ## Reporting a vulnerability
 
-Do not disclose suspected vulnerabilities in a public issue. Use the repository host's private security-reporting channel, or contact the maintainers privately through the project account, with:
+Please do not report vulnerabilities in a public issue. Use GitHub's private security reporting feature for this repository. If that feature is unavailable, contact the maintainers privately through the repository host.
 
-- a short description of the issue;
+Include:
+
+- a concise description of the issue;
 - affected files, commands, or release artifacts;
 - reproducible steps and expected versus observed behavior; and
-- any proposed mitigation.
+- a suggested mitigation, when available.
 
-Please avoid including credentials, personal data, or unrelated system information. Maintainers will acknowledge a report, investigate it, and coordinate disclosure after a fix or mitigation is available.
+Do not include credentials, personal data, or unrelated system information. The maintainers will acknowledge the report, investigate it, and coordinate disclosure after a fix or mitigation is available.
 
 ## Scope
 
-Security reports are especially useful for installer path handling, archive extraction, generated-source processing, dependency execution, and accidental inclusion of secrets in release artifacts.
+Relevant security areas include installer path handling, archive extraction, generated-source processing, dependency execution, and accidental inclusion of secrets in release artifacts.
