@@ -16,6 +16,13 @@ MANIFEST_PATH = ROOT / "data" / "processed" / "manifest.json"
 
 REQUIRED_SKILL_FILES = [
     ROOT / "README.md",
+    ROOT / "LICENSE",
+    ROOT / "NOTICE.md",
+    ROOT / "CHANGELOG.md",
+    ROOT / "CONTRIBUTING.md",
+    ROOT / "CODE_OF_CONDUCT.md",
+    ROOT / "SECURITY.md",
+    ROOT / "DEVELOPMENT.md",
     ROOT / "install.sh",
     SKILL_DIR / "SKILL.md",
     SKILL_DIR / "agents" / "openai.yaml",
@@ -27,17 +34,18 @@ REQUIRED_SKILL_FILES = [
 ]
 
 REQUIRED_DESCRIPTION_TERMS = [
-    "writing",
-    "rewriting",
-    "polishing",
-    "style-unifying",
-    "line-editing",
-    "multi-level revision",
+    "editing",
+    "scientific",
     "manuscript",
-    "section",
-    "paragraph",
-    "sentence",
-    "phrase",
+    "draft",
+    "translate",
+    "rewrite",
+    "polish",
+    "line-edit",
+    "restructure",
+    "diagnose",
+    "peer-review",
+    "style",
 ]
 
 REQUIRED_FRAMEWORK_HEADINGS = [
@@ -120,9 +128,23 @@ def validate_openai_metadata() -> None:
 
 def validate_repository_guidance() -> None:
     readme = read(ROOT / "README.md")
-    for text in ["## Install", "./install.sh", "$academic-phrasebank-assistant", "tools/validate_skill_package.py"]:
+    for text in ["## Install", "./install.sh", "$academic-phrasebank-assistant", "## Source attribution", "## User releases", "NOTICE.md"]:
         if text not in readme:
             fail(f"README.md missing guidance: {text}")
+    notice = read(ROOT / "NOTICE.md")
+    for text in ["Apache License", "University of Manchester", "Academic Phrasebank", "source-coverage.md"]:
+        if text not in notice:
+            fail(f"NOTICE.md missing attribution term: {text}")
+    for path, terms in {
+        ROOT / "CONTRIBUTING.md": ["Required checks", "Pull requests"],
+        ROOT / "CODE_OF_CONDUCT.md": ["respectfully", "Harassment"],
+        ROOT / "SECURITY.md": ["Reporting a vulnerability", "public issue"],
+        ROOT / "DEVELOPMENT.md": ["Rebuild references", "Build a user release"],
+    }.items():
+        text = read(path)
+        for term in terms:
+            if term not in text:
+                fail(f"{path.relative_to(ROOT)} missing guidance: {term}")
     builder = read(ROOT / "tools" / "build_phrasebank_refs.py")
     if 'REF_DIR.glob("*.md")' in builder:
         fail("builder must not delete every reference markdown file")
@@ -166,6 +188,50 @@ def validate_references() -> None:
     if any(item.get("group_count", 0) <= 0 or item.get("phrase_count", 0) <= 0 for item in included):
         fail("manifest contains an included page without phrase groups or phrase lines")
 
+    expected_reference_names = {f"{slug}.md" for slug in slugs}
+    actual_reference_names = {
+        path.name
+        for path in REF_DIR.glob("*.md")
+        if path.name not in {"index.md", "source-coverage.md", "revision-framework.md"}
+    }
+    if actual_reference_names != expected_reference_names:
+        fail(
+            "reference files do not match manifest slugs: "
+            f"manifest={sorted(expected_reference_names)} refs={sorted(actual_reference_names)}"
+        )
+
+    index_routes = set(re.findall(r"^- `([^`]+\.md)`:", index_text, flags=re.M))
+    if index_routes != expected_reference_names | {"revision-framework.md"}:
+        fail(
+            "references/index.md routes do not match available references: "
+            f"routes={sorted(index_routes)} expected={sorted(expected_reference_names | {'revision-framework.md'})}"
+        )
+
+    coverage_text = read(REF_DIR / "source-coverage.md")
+    coverage_slugs = set(re.findall(r"^- `([^`]+)` \(", coverage_text, flags=re.M))
+    if coverage_slugs != slugs:
+        fail(
+            "source-coverage.md slugs do not match manifest: "
+            f"coverage={sorted(coverage_slugs)} manifest={sorted(slugs)}"
+        )
+
+
+def validate_generated_reference_text() -> None:
+    """Reject known extraction artefacts while allowing real prose containing break."""
+    bad_patterns = [
+        (re.compile(r"\bB\s+e\s+ing\b", flags=re.I), "split inline word: B e ing"),
+        (re.compile(r"^-\s+break\s*$", flags=re.I | re.M), "bare layout marker: - break"),
+        (re.compile(r"<span\b[^>]*>break</span>", flags=re.I), "hidden break span"),
+    ]
+    generated_paths = [
+        path for path in REF_DIR.glob("*.md") if path.name != "revision-framework.md"
+    ]
+    for path in generated_paths:
+        text = read(path)
+        for pattern, label in bad_patterns:
+            if pattern.search(text):
+                fail(f"{label} in {path.relative_to(ROOT)}")
+
 
 def validate_no_unresolved_markers() -> None:
     marker_pattern = re.compile(r"\b(TODO|FIXME|XXXXX|STUB)\b", flags=re.I)
@@ -185,6 +251,7 @@ def main() -> int:
     validate_repository_guidance()
     validate_installer()
     validate_references()
+    validate_generated_reference_text()
     validate_no_unresolved_markers()
     print("Skill package audit passed.")
     return 0

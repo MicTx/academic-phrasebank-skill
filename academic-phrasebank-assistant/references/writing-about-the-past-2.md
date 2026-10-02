@@ -28,18 +28,18 @@ Source: https://www.phrasebank.manchester.ac.uk/writing-about-the-past-2/
 - authorities placed restrictions on academics.
 
 ### Time phrases associated with the use of the present perfect tense: past and present connected
-- To date , little evidence has been found associating X with Y.
-- Up to now , the research has tended to focus on X rather than on Y.
-- So far , three factors have been identified as being potentially important: X, Y, and Z.
-- Since 1965 , these four economies have doubled their share of world production and trade.
-- Until recently , there has been little interest in X.
-- Recently , these questions have been addressed by researchers in many fields.
-- In recent years , researchers have investigated a variety of approaches to X but …
-- More recently , literature has emerged that offers contradictory findings about …
+- To date, little evidence has been found associating X with Y.
+- Up to now, the research has tended to focus on X rather than on Y.
+- So far, three factors have been identified as being potentially important: X, Y, and Z.
+- Since 1965, these four economies have doubled their share of world production and trade.
+- Until recently, there has been little interest in X.
+- Recently, these questions have been addressed by researchers in many fields.
+- In recent years, researchers have investigated a variety of approaches to X but …
+- More recently, literature has emerged that offers contradictory findings about …
 - The past decade has seen the rapid development of X in many …
 - Over the past 30 years there has been a significant increase in …
 - Over the past century there has been a dramatic increase in …
-- Over the past few decades , the world has seen the stunning transformation of X, Y and Z.
+- Over the past few decades, the world has seen the stunning transformation of X, Y and Z.
 
 ### The present perfect tense is typically used to describe recent research with several contributors
 - Previous studies of X have not dealt with …

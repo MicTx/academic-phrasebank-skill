@@ -5,7 +5,7 @@ Source: https://www.phrasebank.manchester.ac.uk/referring-to-sources/
 ## Role in a Manuscript
 
 - One of the distinguishing features of academic writing is that it is informed by what is already known, what work has been done before, and/or what ideas and models have already been developed. Thus, in academic texts, writers frequently make reference to other studies and to the work of other authors. It is important that writers guide their readers through this literature. This section of Academic Phrasebank lists some of the phrases that writers may use for this purpose.
-- A note on the literature review: It is the purpose of the literature review section of a paper or dissertation to show the reader, in a systematic way, what is already known about the research topic as a whole, and to outline the key ideas and theories that help us to understand this. As well as being systematic, the review should be evaluative and critical of the studies or ideas which are relevant to the current work. For example, you may think a particular study did not investigate some important aspect of the area you are researching, that the author(s) failed to notice a weakness in their methods, or that their conclusion is not well-supported (refer to Being Critical ).
+- A note on the literature review: It is the purpose of the literature review section of a paper or dissertation to show the reader, in a systematic way, what is already known about the research topic as a whole, and to outline the key ideas and theories that help us to understand this. As well as being systematic, the review should be evaluative and critical of the studies or ideas which are relevant to the current work. For example, you may think a particular study did not investigate some important aspect of the area you are researching, that the author(s) failed to notice a weakness in their methods, or that their conclusion is not well-supported (refer to Being Critical).
 - A note on referencing style: The way a writer refers to other sources varies somewhat across different disciplines. In some cases, where the individual author is important, the author’s name will be the main subject of the sentence; in other cases, the author’s name may only be mentioned in brackets ( … ) or via a number notation system (e.g. footnotes and endnotes). The ‘author as subject’ style is less common in the empirical disciplines (sciences) and more commonly used in the humanities. Different referencing systems are used in different disciplines. In the majority of the examples given here, the Harvard in-text referencing system has been used.
 - A note on verb tenses: For general reference to the literature, the present perfect tense (have/has + verb participle) tends to be used. For reference to specific studies carried out in the past, the simple past tense is most commonly used. This is normally the case where a specific date or point in time in the past forms a part of the sentence. When referring to the words or ideas of writers, the present tense is often used if the ideas are still relevant, even if the author is no longer alive. The examples given below reflect these general patterns, but these are by no means rigid.
 
@@ -113,7 +113,7 @@ Source: https://www.phrasebank.manchester.ac.uk/referring-to-sources/
 - Many historians have argued that … (e.g. Jones, 1997; Brown, 1999; Smith, 2019).
 - There is a consensus among social scientists that … (e.g. Smith, 2019; Jones, 2020; …
 - Data from several sources have identified the increased X and Y associated with obesity.
-- Recently, in vitro studies have shown that X can … (Smith et al. , 2018; Jones et al. , 2021).
+- Recently, in vitro studies have shown that X can … (Smith et al., 2018; Jones et al., 2021).
 - It has been demonstrated that a high intake of X results in damage to … (Smith, 2015; …).
 - To date,
 - Thus far,
@@ -226,8 +226,8 @@ Source: https://www.phrasebank.manchester.ac.uk/referring-to-sources/
 - reported …
 
 ### Reference to a previous investigation: topic prominent
-- To determine the effects of X, Jones et al . (2005) compared …
-- X was originally isolated from Y in a soil sample from … (Jones et al. , 1952).
+- To determine the effects of X, Jones et al. (2005) compared …
+- X was originally isolated from Y in a soil sample from … (Jones et al., 1952).
 - The electronic spectroscopy of X was first studied by Smith and Jones in 1970.
 - X formed the central focus of a study by Smith (2002) in which the author found …
 - To better understand the mechanisms of X and its effects, Jones (2013) analysed the …
@@ -318,33 +318,25 @@ Source: https://www.phrasebank.manchester.ac.uk/referring-to-sources/
 - This result conflicts with Smith’s (1965) previously mentioned study which found that …
 - Conversely, Smith (2010) reported no significant difference in mortality between X and Y.
 - Some writers (e.g. Smith, 2002) have attempted to draw fine distinctions between …
-- break
 - Some authors have mainly been interested in questions concerning X and Y (Smith, 2001; Jones …
-- break
 - Much of the available literature on X deals with the question of …
 - Others (see Jones, 2003; Brown, 2004) question the usefulness of …
-- break
 - Others have highlighted the relevance of …
-- break
 - But Smith (2015) is much more concerned with …
 - Smith (2015) notes that …
-- break
 - Smith (2013) found that X accounted for 30% of Y.
 - However, Jones’s (2018) study of Y found no link between …
-- break
 - Other researchers, however, who have looked at X, have found … Jones (2010), for example, …
 - Smith (2010) presents an X account,
-- break
 - While Smith (2008) focusses on X,
 - whilst Jones (2011) …
-- break
 - Jones (2009) is more concerned with …
 
 ### Some ways of introducing quotations
 - Commenting on X, Smith (2003) argues: ‘… …’
 - As Smith (2004: 215) states: ‘there are many good reasons to be sceptical’.
 - As Smith argues: ‘In the past, the purpose of education was to …’ (Smith, 2000:150).
-- In the final part of the Theses on Feuerbach , Marx writes: ‘Philosophers have hitherto only …’
+- In the final part of the Theses on Feuerbach, Marx writes: ‘Philosophers have hitherto only …’
 - Smith concludes: ‘The idea of development stands today like a ruin in …’ (Smith, 1992: 156).
 - As Smith (2015: 320)
 - notes: ‘… … … … … ‘

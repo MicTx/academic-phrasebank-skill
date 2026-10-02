@@ -1,13 +1,32 @@
 # Agent Notes
 
-- 2026-06-22: Manchester Academic Phrasebank is a WordPress site with a Yoast sitemap index at `https://www.phrasebank.manchester.ac.uk/sitemap.xml`. For this skill, traverse all four listed sitemaps (`post`, `page`, `category`, `author`) and classify every URL; do not rely only on top navigation.
-- 2026-06-22: The reusable writing content is 17 page-sitemap pages. Non-writing pages include home, about, Amazon, author archives, category archive, useful links, author bio, and the test post.
-- 2026-06-22: Phrase groups are reliably extracted from `h5.et_pb_toggle_title` followed by `div.et_pb_toggle_content.clearfix`. For page summaries, cut the HTML after the last `h1` before the first toggle to avoid accidentally capturing navigation labels.
-- 2026-06-22: Keep the skill body lean and route to reference files. Store source coverage in `references/source-coverage.md` and fail the builder when a new sitemap URL is unclassified.
-- 2026-06-23: `tools/build_phrasebank_refs.py` deletes existing raw HTML/XML before live fetching. If the remote site times out, validation can leave tracked `data/raw/*.html` files deleted; after any failed rebuild, immediately check `git status` and restore these validation side effects. Prefer improving the builder to fetch into a temporary directory and replace outputs only after a successful full run.
-- 2026-06-23: Custom skill references such as `references/revision-framework.md` are hand-maintained knowledge, not Phrasebank scrape output. Builders should only delete/regenerate known generated reference files (`index`, `source-coverage`, and page slug files), otherwise future rebuilds can silently remove custom capability layers.
-- 2026-06-23: This Codex CLI's `codex exec` does not support `--ask-for-approval`; use `-s danger-full-access` or `--dangerously-bypass-approvals-and-sandbox` when a non-interactive forward test needs full access.
-- 2026-06-23: Treat a skill as complete only after checking trigger metadata, `agents/openai.yaml`, install instructions, reference routing, custom non-generated references, offline package audit, builder reproducibility, and at least one realistic forward-test output.
-- 2026-06-23: After editing a skill that is also installed under `$CODEX_HOME/skills`, sync the installed copy before forward-testing; otherwise the test may load the previous installed version and give false confidence.
-- 2026-06-23: Ship skill repos with an executable `install.sh` that installs to both `${CODEX_HOME:-$HOME/.codex}/skills` and `${CLAUDE_HOME:-$HOME/.claude}/skills`, while allowing `CODEX_SKILLS_DIR` and `CLAUDE_SKILLS_DIR` overrides for safe tests.
-- 2026-06-23: When users request a title-cased skill name, keep the internal Codex skill name lowercase hyphen-case and use the title-cased wording only for UI display names. Rename install paths, validators, builders, README usage, and installed copies together; keep legacy cleanup in `install.sh` when replacing an old skill name.
+These notes record facts specific to this repository. General skill-authoring or release-process advice belongs in the relevant skill documentation, not here.
+
+## Phrasebank source and extraction
+
+- The public source is the WordPress Yoast sitemap index at `https://www.phrasebank.manchester.ac.uk/sitemap.xml`.
+- The builder traverses the four listed sitemaps (`post`, `page`, `category`, and `author`) and classifies every URL. The reusable writing content is 17 page-sitemap pages; home, about, archive, author, useful-links, test-post, and other non-writing pages are excluded.
+- Phrase groups are extracted from `h5.et_pb_toggle_title` followed by `div.et_pb_toggle_content.clearfix`. Page summaries stop after the last `h1` before the first toggle so navigation labels do not enter the references.
+- Inline HTML tags must be removed without inserting spaces inside words. Hidden layout markers such as `break` are not phrase content. Preserve intentional examples such as `X`, `Smith`, and `Jones`; the skill must prevent them from leaking into user-specific claims.
+
+## Generated and hand-maintained files
+
+- Generated references are the page-slug files plus `references/index.md` and `references/source-coverage.md`.
+- `academic-phrasebank-assistant/references/revision-framework.md` is hand-maintained and must survive every rebuild.
+- `data/raw/` and `data/processed/manifest.json` are generated audit data. A failed network rebuild must not delete the previous successful outputs.
+- `academic-phrasebank-assistant/evals/evals.json` is a hand-maintained development input. Evaluation workspaces and viewer output stay outside the skill directory and are excluded from user releases.
+
+## Build and release facts
+
+- `tools/build_phrasebank_refs.py` stages fetched raw data and generated references, then commits raw, processed, and reference trees with rollback across the three directory swaps; a complete successful run is required before any live output changes.
+- `tools/validate_skill_package.py` is the project-specific offline audit. The standard skill frontmatter check remains `quick_validate.py` from the installed `skill-creator` package.
+- `tools/build_release.py` runs validation and install smoke checks, creates a commit-derived source snapshot, writes deterministic `.tar.gz` and `.zip` archives, verifies their contents, and writes `SHA256SUMS` plus a release manifest under `dist/`.
+- User release snapshots contain only the installer, public project documents, attribution/changelog, and the installable skill. They exclude `Agent.md`, `DEVELOPMENT.md`, tests, evals, raw source snapshots, manifests, and build tools.
+- The release identifier is derived from the current Git commit and is not a semantic version.
+- ZIP and TAR release archives preserve `install.sh` mode `0755`; archive checks fail if the executable bit is lost.
+
+## Installation acceptance
+
+- `install.sh` installs to both `${CODEX_HOME:-$HOME/.codex}/skills` and `${CLAUDE_HOME:-$HOME/.claude}/skills`, with `CODEX_SKILLS_DIR` and `CLAUDE_SKILLS_DIR` overrides for temporary smoke tests.
+- Install verification must exercise two separate temporary target directories and confirm that a failed or empty source copy does not replace an existing destination.
+- After a skill edit, the installed copy must be refreshed before forward-testing; otherwise tests may exercise stale metadata or references.

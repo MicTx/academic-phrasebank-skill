@@ -116,7 +116,7 @@ Source: https://www.phrasebank.manchester.ac.uk/describing-methods/
 
 ### Indicating the use of an established method
 - The solution was then assayed for X using the Y method.
-- X was prepared according to the procedure used by Jones et al . (1957).
+- X was prepared according to the procedure used by Jones et al. (1957).
 - The synthesis of X was done according to the procedure of Smith (1973).
 - X was synthesised using the same method that was detailed for Y, using …
 - Samples were analysed for X as previously reported by Smith et al. (2012).

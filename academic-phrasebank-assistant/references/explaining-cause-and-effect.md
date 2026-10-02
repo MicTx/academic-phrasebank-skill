@@ -103,13 +103,10 @@ Source: https://www.phrasebank.manchester.ac.uk/explaining-cause-and-effect/
 
 ### Adverbial elements indicating causality
 - Malnutrition leads to illness and a reduced ability to work in adulthood,
-- break
 - The warm air rises above the surface of the sea,
 - thus
-- break
 - thereby
 - perpetuating the poverty cycle.
-- break
 - creating an area of low pressure.
 
 ### Indicating a possible causal relationship
