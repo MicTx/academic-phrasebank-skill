@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILL_DIR = ROOT / "academic-phrasebank-skill"
 SKILL_NAME = "academic-phrasebank-skill"
 DEFAULT_OUTPUT_DIR = ROOT / "dist"
-PUBLIC_ROOT_FILES = {"README.md", "LICENSE", "NOTICE.md", "CHANGELOG.md", "install.sh"}
+PUBLIC_ROOT_FILES = {"README.md", "LICENSE", "NOTICE.md", "CHANGELOG.md", "SUPPORT.md", "SECURITY.md", "install.sh"}
 
 
 def run(command: list[str], *, cwd: Path = ROOT, env: Optional[dict[str, str]] = None) -> None:
@@ -154,6 +154,8 @@ def verify_archive(path: Path, root_name: str) -> None:
         f"{root_name}/LICENSE",
         f"{root_name}/NOTICE.md",
         f"{root_name}/CHANGELOG.md",
+        f"{root_name}/SUPPORT.md",
+        f"{root_name}/SECURITY.md",
         f"{root_name}/install.sh",
         f"{root_name}/academic-phrasebank-skill/SKILL.md",
         f"{root_name}/academic-phrasebank-skill/references/index.md",

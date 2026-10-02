@@ -22,7 +22,12 @@ REQUIRED_SKILL_FILES = [
     ROOT / "CONTRIBUTING.md",
     ROOT / "CODE_OF_CONDUCT.md",
     ROOT / "SECURITY.md",
+    ROOT / "SUPPORT.md",
     ROOT / "DEVELOPMENT.md",
+    ROOT / ".github" / "ISSUE_TEMPLATE" / "config.yml",
+    ROOT / ".github" / "ISSUE_TEMPLATE" / "bug_report.yml",
+    ROOT / ".github" / "ISSUE_TEMPLATE" / "feature_request.yml",
+    ROOT / ".github" / "pull_request_template.md",
     ROOT / "install.sh",
     SKILL_DIR / "SKILL.md",
     SKILL_DIR / "agents" / "openai.yaml",
@@ -128,7 +133,7 @@ def validate_openai_metadata() -> None:
 
 def validate_repository_guidance() -> None:
     readme = read(ROOT / "README.md")
-    for text in ["## Install", "./install.sh", "$academic-phrasebank-skill", "## Source attribution", "## User releases", "NOTICE.md"]:
+    for text in ["## Installation", "./install.sh", "$academic-phrasebank-skill", "## Reference source", "## Help and contribution", "NOTICE.md"]:
         if text not in readme:
             fail(f"README.md missing guidance: {text}")
     notice = read(ROOT / "NOTICE.md")
@@ -136,15 +141,27 @@ def validate_repository_guidance() -> None:
         if text not in notice:
             fail(f"NOTICE.md missing attribution term: {text}")
     for path, terms in {
-        ROOT / "CONTRIBUTING.md": ["Required checks", "Pull requests"],
-        ROOT / "CODE_OF_CONDUCT.md": ["respectfully", "Harassment"],
+        ROOT / "CONTRIBUTING.md": ["Local checks", "Pull requests"],
+        ROOT / "CODE_OF_CONDUCT.md": ["with respect", "harassment"],
         ROOT / "SECURITY.md": ["Reporting a vulnerability", "public issue"],
-        ROOT / "DEVELOPMENT.md": ["Rebuild references", "Build a user release"],
+        ROOT / "SUPPORT.md": ["Usage questions", "Bug reports", "SECURITY.md"],
+        ROOT / "DEVELOPMENT.md": ["Reference data", "User package"],
+        ROOT / ".github" / "pull_request_template.md": ["## Summary", "## Validation", "## Compatibility"],
     }.items():
         text = read(path)
         for term in terms:
             if term not in text:
                 fail(f"{path.relative_to(ROOT)} missing guidance: {term}")
+    issue_template_terms = {
+        ROOT / ".github" / "ISSUE_TEMPLATE" / "config.yml": ["blank_issues_enabled", "Usage questions"],
+        ROOT / ".github" / "ISSUE_TEMPLATE" / "bug_report.yml": ["Bug report", "Reproduction steps", "Expected behavior"],
+        ROOT / ".github" / "ISSUE_TEMPLATE" / "feature_request.yml": ["Feature request", "Problem", "Proposal"],
+    }
+    for path, terms in issue_template_terms.items():
+        text = read(path)
+        for term in terms:
+            if term not in text:
+                fail(f"{path.relative_to(ROOT)} missing template term: {term}")
     builder = read(ROOT / "tools" / "build_phrasebank_refs.py")
     if 'REF_DIR.glob("*.md")' in builder:
         fail("builder must not delete every reference markdown file")
