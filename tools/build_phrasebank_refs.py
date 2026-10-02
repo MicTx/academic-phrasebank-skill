@@ -30,13 +30,20 @@ EXCLUDED_SLUGS = {
     "",
     "2021/08/26/testing",
     "about-academic-phrasebank",
-    "amazon",
     "author/humwebteam",
     "author/mtfssjes",
     "category/uncategorised",
     "dr-john-morley",
     "useful-links",
 }
+
+SUPPRESSED_SLUGS = {"amazon"}
+MARKETING_MARKERS = (
+    "enhanced and expanded version of phrasebank",
+    "phrasebankresearch.net",
+    "download_kindle_version",
+    'href="https://www.phrasebank.manchester.ac.uk/amazon/"',
+)
 
 CORE_SLUGS = {
     "introducing-work",
@@ -101,7 +108,11 @@ def fetch(url: str) -> str:
 def normalise_raw_html(text: str) -> str:
     # Keep checked-in snapshots stable across servers that use CRLF.
     text = text.replace("\r\n", "\n").replace("\r", "\n")
-    text = "\n".join(line.rstrip() for line in text.split("\n"))
+    text = "\n".join(
+        line.rstrip()
+        for line in text.split("\n")
+        if not any(marker in line.casefold() for marker in MARKETING_MARKERS)
+    )
     text = re.sub(r'"token":"[^"]+"', '"token":"<token>"', text)
     text = re.sub(r'"et_frontend_nonce":"[^"]+"', '"et_frontend_nonce":"<nonce>"', text)
     text = re.sub(r'"et_ab_log_nonce":"[^"]+"', '"et_ab_log_nonce":"<nonce>"', text)
@@ -513,7 +524,13 @@ def main() -> int:
         urls, sitemap_urls = collect_sitemap_urls(temp_raw_dir)
         included_urls = [url for url in urls if slug_from_url(url) in SECTION_ORDER]
         excluded_urls = sorted(url for url in urls if slug_from_url(url) in EXCLUDED_SLUGS)
-        unknown_urls = [url for url in urls if slug_from_url(url) not in SECTION_ORDER and slug_from_url(url) not in EXCLUDED_SLUGS]
+        unknown_urls = [
+            url
+            for url in urls
+            if slug_from_url(url) not in SECTION_ORDER
+            and slug_from_url(url) not in EXCLUDED_SLUGS
+            and slug_from_url(url) not in SUPPRESSED_SLUGS
+        ]
         if unknown_urls:
             print("Unknown sitemap URLs require classification:", file=sys.stderr)
             for url in unknown_urls:
