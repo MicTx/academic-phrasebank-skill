@@ -15,7 +15,7 @@ Contributions should improve the skill, its reference routing, source attributio
 
 Run the checks documented in `DEVELOPMENT.md`, including the standard skill validator, the project validator, the unit tests, and `git diff --check`.
 
-If the Phrasebank extractor or generated references change, run a complete rebuild and inspect the resulting manifest and source coverage. Keep `revision-framework.md` hand-maintained.
+If the Phrasebank extractor or generated references change, run a complete rebuild and inspect `data/processed/manifest.json` and `academic-phrasebank-skill/references/source-coverage.md`. Keep `academic-phrasebank-skill/references/revision-framework.md` hand-maintained.
 
 ## Pull requests
 

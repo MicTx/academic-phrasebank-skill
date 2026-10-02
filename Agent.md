@@ -11,7 +11,7 @@ These notes record facts specific to this repository. General skill-authoring or
 
 ## Generated and hand-maintained files
 
-- Generated references are the page-slug files plus `references/index.md` and `references/source-coverage.md`.
+- Generated references are the page-slug files plus `academic-phrasebank-skill/references/index.md` and `academic-phrasebank-skill/references/source-coverage.md`.
 - `academic-phrasebank-skill/references/revision-framework.md` is hand-maintained and must survive every rebuild.
 - `data/raw/` and `data/processed/manifest.json` are generated audit data. A failed network rebuild must not delete the previous successful outputs.
 - `academic-phrasebank-skill/evals/evals.json` is a hand-maintained development input. Evaluation workspaces and viewer output stay outside the skill directory and are excluded from user releases.
@@ -19,7 +19,7 @@ These notes record facts specific to this repository. General skill-authoring or
 ## Build and release facts
 
 - `tools/build_phrasebank_refs.py` stages fetched raw data and generated references, then commits raw, processed, and reference trees with rollback across the three directory swaps; a complete successful run is required before any live output changes.
-- `tools/validate_skill_package.py` is the project-specific offline audit. The standard skill frontmatter check remains `quick_validate.py` from the installed `skill-creator` package.
+- `tools/validate_skill_package.py` is the project-specific offline audit. The standard skill frontmatter check remains the `skill-creator` package's quick validator.
 - `tools/build_release.py` runs validation and install smoke checks, creates a commit-derived source snapshot, writes deterministic `.tar.gz` and `.zip` archives, verifies their contents, and writes `SHA256SUMS` plus a release manifest under `dist/`.
 - User release snapshots contain only the installer, public project documents, attribution/changelog, and the installable skill. They exclude `Agent.md`, `DEVELOPMENT.md`, tests, evals, raw source snapshots, manifests, and build tools.
 - The release identifier is derived from the current Git commit and is not a semantic version.
