@@ -12,9 +12,9 @@ These notes record facts specific to this repository. General skill-authoring or
 ## Generated and hand-maintained files
 
 - Generated references are the page-slug files plus `references/index.md` and `references/source-coverage.md`.
-- `academic-phrasebank-assistant/references/revision-framework.md` is hand-maintained and must survive every rebuild.
+- `academic-phrasebank-skill/references/revision-framework.md` is hand-maintained and must survive every rebuild.
 - `data/raw/` and `data/processed/manifest.json` are generated audit data. A failed network rebuild must not delete the previous successful outputs.
-- `academic-phrasebank-assistant/evals/evals.json` is a hand-maintained development input. Evaluation workspaces and viewer output stay outside the skill directory and are excluded from user releases.
+- `academic-phrasebank-skill/evals/evals.json` is a hand-maintained development input. Evaluation workspaces and viewer output stay outside the skill directory and are excluded from user releases.
 
 ## Build and release facts
 

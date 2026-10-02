@@ -1,0 +1,4 @@
+interface:
+  display_name: "Academic Phrasebank Skill"
+  short_description: "Evidence-preserving academic manuscript editing"
+  default_prompt: "Use $academic-phrasebank-skill to line-edit or otherwise edit this research manuscript while preserving its numbers, terminology, citations, uncertainty, and evidence strength. Route the work at the right level: structure, paragraph logic, sentence polish, phrase choice, or style unification."
