@@ -112,7 +112,7 @@ Source: https://www.phrasebank.manchester.ac.uk/writing-definitions/
 - One of the first people to define nursing was Florence Nightingale (1860), who wrote: ‘… …’
 - Chomsky writes that a grammar is a ‘device of some sort for producing the ….’ (1957, p.11).
 - Aristotle defines the imagination as ‘the movement which results upon an actual sensation.’
-- Smith et al . (2002) have provided a new definition of health: ‘health is a state of being with …
+- Smith et al. (2002) have provided a new definition of health: ‘health is a state of being with …
 
 ### Referring to people’s definitions: author non-prominent
 - X is defined by Smith (2003: 119) as ‘… …’
@@ -120,7 +120,7 @@ Source: https://www.phrasebank.manchester.ac.uk/writing-definitions/
 - X is, for Smith (2012), the situation which occurs when …
 - A further definition of X is given by Smith (1982) who describes …
 - The term ‘X’ is used by Aristotle in four overlapping senses. First, it is the underlying …
-- X is the degree to which an assessment process or device measures … (Smith et al ., 1986).
+- X is the degree to which an assessment process or device measures … (Smith et al., 1986).
 
 ### Commenting on a definition
 - This definition

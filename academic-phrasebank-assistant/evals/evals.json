@@ -1,0 +1,41 @@
+{
+  "skill_name": "academic-phrasebank-assistant",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Polish this Results paragraph for an SCI manuscript. Return the revised paragraph and a two-sentence note listing any material meaning-preservation checks. Do not add references or change the statistical interpretation:\n\nWe analyzed 248 households. The intervention group had a higher recycling rate than the control group (β = 0.18, 95% CI 0.07–0.29, p = 0.002). The association remained after adjustment for income and household size. This proves that the intervention caused the increase in recycling, and the effect should apply to all urban households.",
+      "expected_output": "A concise Results-style paragraph that retains n = 248, β = 0.18, the 95% CI, p = 0.002, the direction of the association, and the adjustment variables; it should replace the unsupported causal and universal claims with appropriately cautious wording and add no citation.",
+      "files": [],
+      "expectations": [
+        "The revised text preserves 248 households, β = 0.18, 95% CI 0.07–0.29, p = 0.002, and the adjustment variables.",
+        "The text does not claim that the observational association proves causation or applies to all urban households.",
+        "No author, year, citation, DOI, method, result, or numerical value absent from the prompt is introduced.",
+        "The output reads as a Results paragraph rather than adding Discussion-style mechanism or policy interpretation."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Restructure and rewrite the following Discussion passage for a journal manuscript. Separate observed results, interpretation, limitation, and implication into a coherent sequence. Keep the reported values and the citation placeholder [REF] unchanged, and use cautious language where the design does not establish mechanism or causality. Return the revised passage with short labels in brackets only if they improve navigability:\n\nOur model reduced prediction error by 22% (RMSE 4.1 versus 5.3). Therefore, the attention layer captures the true causal structure of the system. This agrees with Lee et al. (2021), although our study used one region and one season [REF]. The model will work in every region and can replace field measurements. We did not test transfer to other seasons or regions, but this limitation is not important because the improvement is large.",
+      "expected_output": "A coherent Discussion passage that reports the 22% reduction and RMSE values first, treats the attention-layer explanation as a possible interpretation, preserves Lee et al. (2021) and [REF], states the one-region/one-season limitation, and narrows the implication instead of promising universal transfer or replacement of field measurements.",
+      "files": [],
+      "expectations": [
+        "The revised passage retains 22%, RMSE 4.1 versus 5.3, one region, one season, Lee et al. (2021), and [REF].",
+        "The causal claim about the attention layer is qualified as a possible explanation or hypothesis rather than a demonstrated mechanism.",
+        "The limitation and implication are separated, and the text does not claim universal regional or seasonal performance or replacement of field measurements.",
+        "The citation placeholder [REF] is retained and no new bibliographic detail is invented."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Translate this Chinese research paragraph into concise academic English for a manuscript. Preserve the technical terms, abbreviations, citation placeholder, and uncertainty. Do not invent authors or years. Return only the translation, followed by one short note if an ambiguity must remain visible:\n\n本研究采用随机森林（random forest, RF）评估城市热岛强度。结果显示，夜间地表温度与建筑密度呈正相关（r = 0.62，p < 0.001），但该结果不能证明建筑密度导致热岛增强。由于样本仅覆盖夏季的三个城区，结论能否推广到其他季节和地区仍需进一步验证（见[REF]）。",
+      "expected_output": "A fluent academic English translation that preserves random forest (RF), urban heat-island intensity, nighttime land-surface temperature, building density, r = 0.62, p < 0.001, the non-causal limitation, the three summer districts, the generalisation uncertainty, and [REF].",
+      "files": [],
+      "expectations": [
+        "The translation preserves random forest (RF), urban heat-island intensity, nighttime land-surface temperature, building density, r = 0.62, and p < 0.001.",
+        "The translation explicitly states that the correlation does not establish that building density causes stronger heat-island effects.",
+        "The limitation of three districts in summer and the need for validation across seasons and regions are retained.",
+        "The placeholder [REF] is retained and no author, year, or citation is invented."
+      ]
+    }
+  ]
+}

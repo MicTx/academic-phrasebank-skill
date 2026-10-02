@@ -4,7 +4,7 @@ Source: https://www.phrasebank.manchester.ac.uk/describing-quantities/
 
 ## Role in a Manuscript
 
-- The language for writing about quantities can be a complex area for non-native speakers because there are many combinations of short grammar words, such as prepositions and pronouns, and these can easily be confused. Many of the phrases given below also contain approximators such as: nearly, approximately, over half, less than, just over .
+- The language for writing about quantities can be a complex area for non-native speakers because there are many combinations of short grammar words, such as prepositions and pronouns, and these can easily be confused. Many of the phrases given below also contain approximators such as: nearly, approximately, over half, less than, just over.
 
 ## Phrase Groups
 
@@ -47,7 +47,7 @@ Source: https://www.phrasebank.manchester.ac.uk/describing-quantities/
 - Since 1981, England has experienced an 89% increase in crime.
 - The response rate was 60% at six months and 56% at 12 months.
 - In 1960 just over 5% of live births in 1960 were outside marriage.
-- Returned surveys from 34 radiologists yielded a 34% response rate .
+- Returned surveys from 34 radiologists yielded a 34% response rate.
 - He also noted that fewer than 10% of the articles included in his study cited …
 - With each year of advancing age, the probability of having X increased by 9.6% (p = 0.006).
 - The mean income of the bottom 20 percent of U.S. families declined from $10,716 in 1970 to …
@@ -75,7 +75,7 @@ Source: https://www.phrasebank.manchester.ac.uk/describing-quantities/
 - The average of 12 observations in the X, Y and Z is 19.2 mgs/m …
 - This figure can be seen as the average life expectancy at various ages.
 - The proposed model suggests a steep decline in mean life expectancy …
-- Roman slaves probably had a lower than average life expectancy .
+- Roman slaves probably had a lower than average life expectancy.
 - The mean age of Xs with coronary atherosclerosis was 48.3 ± 6.3 years.
 - Mean estimated age at death was 38.1 ± 12.0 years (ranging from 10 to 60+ years)
 - The mean score for X was subjected to multivariate analysis of variance to determine …
