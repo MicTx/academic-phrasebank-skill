@@ -1,8 +1,9 @@
 #!/bin/sh
 set -eu
 
-SKILL_NAME="academic-phrasebank-assistant"
-LEGACY_SKILL_NAME="sci-academic-writing"
+SKILL_NAME="academic-phrasebank-skill"
+LEGACY_SKILL_NAME="academic-phrasebank-assistant"
+OLDER_LEGACY_SKILL_NAME="sci-academic-writing"
 SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 SOURCE_DIR="$SCRIPT_DIR/$SKILL_NAME"
 
@@ -49,6 +50,7 @@ install_skill() {
 
   # The legacy name is removed only after the new copy is in place.
   rm -rf "$target_root/$LEGACY_SKILL_NAME"
+  rm -rf "$target_root/$OLDER_LEGACY_SKILL_NAME"
   rm -rf "$backup_dir"
   trap - EXIT HUP INT TERM
   echo "Installed $SKILL_NAME -> $target_dir"

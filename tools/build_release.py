@@ -19,8 +19,8 @@ from typing import Optional
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL_DIR = ROOT / "academic-phrasebank-assistant"
-SKILL_NAME = "academic-phrasebank-assistant"
+SKILL_DIR = ROOT / "academic-phrasebank-skill"
+SKILL_NAME = "academic-phrasebank-skill"
 DEFAULT_OUTPUT_DIR = ROOT / "dist"
 PUBLIC_ROOT_FILES = {"README.md", "LICENSE", "NOTICE.md", "CHANGELOG.md", "install.sh"}
 
@@ -69,7 +69,7 @@ def should_skip(path: Path) -> bool:
     parts = set(relative.parts)
     if ".git" in parts or "__pycache__" in parts or ".pytest_cache" in parts:
         return True
-    if relative.parts and relative.parts[0] in {"dist", "academic-phrasebank-assistant-workspace"}:
+    if relative.parts and relative.parts[0] in {"dist", "academic-phrasebank-skill-workspace"}:
         return True
     if path.name == ".DS_Store" or "evals" in parts:
         return True
@@ -155,8 +155,8 @@ def verify_archive(path: Path, root_name: str) -> None:
         f"{root_name}/NOTICE.md",
         f"{root_name}/CHANGELOG.md",
         f"{root_name}/install.sh",
-        f"{root_name}/academic-phrasebank-assistant/SKILL.md",
-        f"{root_name}/academic-phrasebank-assistant/references/index.md",
+        f"{root_name}/academic-phrasebank-skill/SKILL.md",
+        f"{root_name}/academic-phrasebank-skill/references/index.md",
     }
     if path.suffix == ".zip":
         with zipfile.ZipFile(path) as archive:

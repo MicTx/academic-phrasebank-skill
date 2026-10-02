@@ -1,9 +1,9 @@
 ---
-name: academic-phrasebank-assistant
+name: academic-phrasebank-skill
 description: Expert English-language editing for scientific and SCI research manuscripts, grounded in the bundled Manchester Academic Phrasebank. Use this skill whenever a user asks to draft, translate, rewrite, polish, line-edit, restructure, diagnose, peer-review the English or argumentation of a manuscript, or unify the style of research writing, including introductions, literature reviews, methods, results, discussions, conclusions, abstracts, definitions, cautious claims, comparisons, trends, quantities, causality, citations, and transitions. Apply it even when the user does not mention Phrasebank or SCI explicitly but needs publication-ready academic English.
 ---
 
-# Academic Phrasebank Assistant
+# Academic Phrasebank Skill
 
 ## Mission
 

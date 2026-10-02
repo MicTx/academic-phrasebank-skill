@@ -24,7 +24,7 @@ PAGE_SITEMAP_URL = f"{BASE_URL}/page-sitemap.xml"
 ROOT = Path(__file__).resolve().parents[1]
 RAW_DIR = ROOT / "data" / "raw"
 PROCESSED_DIR = ROOT / "data" / "processed"
-REF_DIR = ROOT / "academic-phrasebank-assistant" / "references"
+REF_DIR = ROOT / "academic-phrasebank-skill" / "references"
 
 EXCLUDED_SLUGS = {
     "",

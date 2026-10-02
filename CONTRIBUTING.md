@@ -7,7 +7,7 @@ Contributions should improve the skill, its reference routing, source attributio
 ## Before opening a change
 
 1. Read `README.md` and `DEVELOPMENT.md`.
-2. Keep user-facing behavior and the internal skill name `academic-phrasebank-assistant` compatible.
+2. Keep user-facing behavior and the internal skill name `academic-phrasebank-skill` compatible.
 3. Do not add Phrasebank text without recording its upstream URL and provenance.
 4. Do not add invented citations, examples, statistics, or scientific claims to the skill instructions.
 
