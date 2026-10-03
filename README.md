@@ -69,8 +69,7 @@ Use a reference page as a pattern library for a rhetorical move. Adapt its frame
 
 - [Support](SUPPORT.md) explains what to include in a usage question or bug report.
 - [Security policy](SECURITY.md) explains private vulnerability reporting.
-- [Contributing](CONTRIBUTING.md) lists content rules and pull-request checks.
-- [Development guide](DEVELOPMENT.md) describes reference rebuilds, validation, and release builds.
+- Contributors can read `CONTRIBUTING.md` for content rules and pull-request checks, and `DEVELOPMENT.md` for reference rebuilds, validation, and release builds in the source repository.
 - [Changelog](CHANGELOG.md) records public changes.
 
 ## License
