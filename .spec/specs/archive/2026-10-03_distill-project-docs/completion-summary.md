@@ -59,7 +59,7 @@
 - Feature：重写根目录、技能说明、教程、治理文档和参考页入口；通过生成器统一生成参考页的路由、边界和来源说明
 - Action：Commit
 - Effect：人类读者可从 README 进入安装/教程/参考；LLM 可从 SKILL 识别任务层级/保护内容/禁止事项
-- Commit：local commit will be created after final verification
+- Commit：1f6bda1（主交付）；53f9cbb（发布 README 链接边界修复）
 - Push：not-run by user instruction
 
 ## 知识沉淀
