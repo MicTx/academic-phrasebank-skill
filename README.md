@@ -1,8 +1,15 @@
 # Academic Phrasebank Skill
 
-`academic-phrasebank-skill` edits English scientific manuscripts. It can draft, translate, restructure, diagnose, or polish prose while keeping the author's evidence, terminology, citations, and uncertainty visible.
+`academic-phrasebank-skill` is an evidence-preserving scientific English editor for Codex and Claude Code.
+
+[English](README.md) | [简体中文](README.zh-CN.md)
+
+It drafts, translates, restructures, diagnoses, and polishes scientific manuscripts while keeping the author's evidence, terminology, citations, and uncertainty visible.
 
 The central rule is simple: **make the language as clear as the evidence, and no stronger.** The bundled Phrasebank supplies rhetorical patterns. It does not supply facts for a manuscript.
+
+> [!WARNING]
+> This skill improves wording and structure. It does not verify results, create references, or strengthen claims beyond the supplied evidence.
 
 ## Start here
 

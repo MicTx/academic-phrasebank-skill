@@ -16,6 +16,7 @@ MANIFEST_PATH = ROOT / "data" / "processed" / "manifest.json"
 
 REQUIRED_SKILL_FILES = [
     ROOT / "README.md",
+    ROOT / "README.zh-CN.md",
     ROOT / "LICENSE",
     ROOT / "NOTICE.md",
     ROOT / "CHANGELOG.md",
@@ -133,9 +134,16 @@ def validate_openai_metadata() -> None:
 
 def validate_repository_guidance() -> None:
     readme = read(ROOT / "README.md")
+    chinese_readme = read(ROOT / "README.zh-CN.md")
     for text in ["## Installation", "./install.sh", "$academic-phrasebank-skill", "## Reference source", "## Help and contribution", "NOTICE.md"]:
         if text not in readme:
             fail(f"README.md missing guidance: {text}")
+    for path, text in [(ROOT / "README.md", "README.zh-CN.md"), (ROOT / "README.zh-CN.md", "README.md")]:
+        if text not in (readme if path.name == "README.md" else chinese_readme):
+            fail(f"{path.name} missing language switch link: {text}")
+    for text in ["## 安装", "./install.sh", "$academic-phrasebank-skill", "## 参考来源", "## 帮助与贡献", "NOTICE.md"]:
+        if text not in chinese_readme:
+            fail(f"README.zh-CN.md missing guidance: {text}")
     notice = read(ROOT / "NOTICE.md")
     for text in ["Apache License", "University of Manchester", "Academic Phrasebank", "source-coverage.md"]:
         if text not in notice:

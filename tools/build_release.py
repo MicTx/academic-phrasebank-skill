@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILL_DIR = ROOT / "academic-phrasebank-skill"
 SKILL_NAME = "academic-phrasebank-skill"
 DEFAULT_OUTPUT_DIR = ROOT / "dist"
-PUBLIC_ROOT_FILES = {"README.md", "LICENSE", "NOTICE.md", "CHANGELOG.md", "SUPPORT.md", "SECURITY.md", "install.sh"}
+PUBLIC_ROOT_FILES = {"README.md", "README.zh-CN.md", "LICENSE", "NOTICE.md", "CHANGELOG.md", "SUPPORT.md", "SECURITY.md", "install.sh"}
 
 
 def run(command: list[str], *, cwd: Path = ROOT, env: Optional[dict[str, str]] = None) -> None:
@@ -151,6 +151,7 @@ def build_zip(source_root: Path, archive_path: Path, root_name: str) -> None:
 def verify_archive(path: Path, root_name: str) -> None:
     required = {
         f"{root_name}/README.md",
+        f"{root_name}/README.zh-CN.md",
         f"{root_name}/LICENSE",
         f"{root_name}/NOTICE.md",
         f"{root_name}/CHANGELOG.md",
