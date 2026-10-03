@@ -56,9 +56,9 @@
 - Date Time：2026-10-03 21:57
 - Scope：Add bilingual English and Simplified Chinese README support
 - Feature：新增 README.zh-CN.md、双语互链、发布归档清单、离线校验和 2 项 README 回归测试
-- Action：Commit / Push
+- Action：Commit
 - Effect：源码和发布归档均提供 English/简体中文入口，发布包不再缺失中文 README
-- Commit：归档后创建本地提交
+- Commit：a310c90（交付提交）
 - Push：未执行 push
 
 ## 知识沉淀
