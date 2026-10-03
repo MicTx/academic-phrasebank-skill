@@ -1,10 +1,15 @@
 # Academic Phrasebank Skill
 
+`academic-phrasebank-skill` 是面向 Codex 和 Claude Code、以证据为边界的科研英语编辑 skill。
+
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-`academic-phrasebank-skill` 用于编辑英文科研手稿。它可以协助起草、翻译、重构、诊断和润色，同时保留作者的证据、术语、引用和不确定性。
+它可以起草、翻译、重构、诊断和润色科研手稿，同时保留作者的证据、术语、引用和不确定性。
 
 核心原则很简单：**让语言和证据一样清楚，但不要让语言比证据更强。** 内置 Phrasebank 提供修辞模式，不会为手稿提供事实。
+
+> [!WARNING]
+> 这个 skill 改善表达和结构，但不会核验研究结果、创建参考文献，也不会让论点强于已有证据。
 
 ## 从这里开始
 

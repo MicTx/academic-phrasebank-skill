@@ -18,6 +18,10 @@ class RepositoryDocumentationTests(unittest.TestCase):
         self.assertIn("[English](README.md) | [简体中文](README.zh-CN.md)", english)
         self.assertIn("[English](README.md) | [简体中文](README.zh-CN.md)", chinese)
         for text in (english, chinese):
+            first = next(line for line in text.splitlines() if line and not line.startswith("#"))
+            self.assertLessEqual(len(first), 120)
+            self.assertIn("> [!WARNING]", text)
+        for text in (english, chinese):
             for route in (
                 "./install.sh",
                 "$academic-phrasebank-skill",
