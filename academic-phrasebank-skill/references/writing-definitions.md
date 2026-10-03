@@ -1,8 +1,20 @@
 # Defining terms
 
-Source: https://www.phrasebank.manchester.ac.uk/writing-definitions/
+> Generated reference. Adapt these patterns to the user's claims; never treat the examples, placeholders, or named people as evidence.
 
-## Role in a Manuscript
+## Use This Page
+
+- **Route:** Use this page for a cross-section language function.
+- **Input:** Supply the user's concepts, evidence, section, and desired rhetorical move.
+- **Output:** Adapt a small number of patterns into connected prose, then check scope and evidence strength.
+- **Boundary:** Do not invent facts, citations, methods, results, or mechanisms to complete a pattern.
+
+## Source
+
+- URL: https://www.phrasebank.manchester.ac.uk/writing-definitions/
+- Snapshot: generated from the public source by `tools/build_phrasebank_refs.py`.
+
+## What This Page Covers
 
 - In academic work students are often expected to give definitions of key words and phrases in order to demonstrate to their tutors that they understand these terms clearly. More generally, however, academic writers define terms so that their readers understand exactly what is meant when certain key terms are used. When important words are not clearly understood misinterpretation may result. In fact, many disagreements (academic, legal, diplomatic, personal) arise as a result of different interpretations of the same term. In academic writing, teachers and their students often have to explore these differing interpretations before moving on to study a topic.
 

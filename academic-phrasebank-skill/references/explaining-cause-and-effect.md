@@ -1,8 +1,20 @@
 # Explaining causality
 
-Source: https://www.phrasebank.manchester.ac.uk/explaining-cause-and-effect/
+> Generated reference. Adapt these patterns to the user's claims; never treat the examples, placeholders, or named people as evidence.
 
-## Role in a Manuscript
+## Use This Page
+
+- **Route:** Use this page for a cross-section language function.
+- **Input:** Supply the user's concepts, evidence, section, and desired rhetorical move.
+- **Output:** Adapt a small number of patterns into connected prose, then check scope and evidence strength.
+- **Boundary:** Do not invent facts, citations, methods, results, or mechanisms to complete a pattern.
+
+## Source
+
+- URL: https://www.phrasebank.manchester.ac.uk/explaining-cause-and-effect/
+- Snapshot: generated from the public source by `tools/build_phrasebank_refs.py`.
+
+## What This Page Covers
 
 - A great deal of academic work involves understanding and suggesting solutions to problems. At postgraduate level, particularly in applied fields, students search out problems to study. In fact, one could say that problems are the raw material for a significant proportion of academic activity. However, solutions cannot be suggested unless the problem is fully analysed, and this involves a thorough understanding of the causes. Some of the language that you may find useful for explaining causes and effects is listed below.
 

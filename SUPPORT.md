@@ -1,19 +1,21 @@
 # Support
 
+Use this page to choose the right report. Remove confidential manuscript content before posting.
+
 ## Usage questions
 
-Read the [README](README.md) and the skill instructions first. For a usage question that is not answered there, open a GitHub Discussion or issue with:
+Read [README.md](README.md), [introduction.md](academic-phrasebank-skill/docs/introduction.md), and the skill instructions first. If the answer is still unclear, include:
 
-- the task you gave the skill;
+- the exact task prompt;
 - the relevant manuscript section or a minimal redacted example; and
 - the behavior you expected and received.
 
-Remove confidential manuscript content before posting. Do not include credentials or private research data.
+Open a GitHub Discussion or issue with that information.
 
 ## Bug reports
 
-Use the bug report template for reproducible defects. Include the release version or commit, operating system, host application, and the smallest example that demonstrates the problem.
+Use the bug-report template for a reproducible defect. Include the release version or commit, operating system, host application, smallest reproducing input, expected behavior, and observed behavior.
 
 ## Security reports
 
-Use the private reporting path described in [SECURITY.md](SECURITY.md). Do not open a public issue for a suspected vulnerability.
+Use the private reporting path in [SECURITY.md](SECURITY.md). Do not open a public issue for a suspected vulnerability.

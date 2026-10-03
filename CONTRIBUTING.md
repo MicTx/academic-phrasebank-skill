@@ -1,31 +1,31 @@
 # Contributing
 
-Thank you for improving Academic Phrasebank Skill. Contributions should make the skill more useful, more accurate, or easier to install and maintain.
+Contributions should make the skill more useful, more accurate, or easier to install and maintain. Start by identifying which user decision the change improves.
 
-## Before you start
+## Before editing
 
-1. Read the [README](README.md), [Development Guide](DEVELOPMENT.md), and [Code of Conduct](CODE_OF_CONDUCT.md).
-2. Open an issue for substantial behavior changes so the intended user outcome is clear.
-3. Create a topic branch from `main`. Keep unrelated changes in separate branches.
+Read [README.md](README.md), [DEVELOPMENT.md](DEVELOPMENT.md), and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). Open an issue for a substantial behavior change so the intended user outcome is recorded before implementation. Create a topic branch from `main`, and keep unrelated work on separate branches.
 
-## Repository areas
+## Repository map
 
-- `academic-phrasebank-skill/`: installable skill, metadata, and reference material.
-- `tools/`: reference builder, package validator, and release builder.
-- `tests/`: offline regression tests for extraction and staging behavior.
-- `data/raw/` and `data/processed/`: generated source snapshots and coverage metadata.
+- `academic-phrasebank-skill/` contains the installable skill, its instructions, guides, and references.
+- `academic-phrasebank-skill/references/*.md` contains generated Phrasebank pages plus the hand-maintained revision framework.
+- `tools/` contains the reference builder, package validator, and release builder.
+- `tests/` contains offline regression tests for extraction and staging behavior.
+- `data/raw/` and `data/processed/` are generated source snapshots and coverage metadata.
 
 ## Content rules
 
-- Preserve the skill name `academic-phrasebank-skill` and its installation contract.
-- Keep scientific claims, citations, statistics, and uncertainty evidence-preserving.
+- Keep the public skill name `academic-phrasebank-skill` and its installation contract.
+- Preserve scientific meaning, citations, statistics, terminology, and uncertainty. A clearer sentence must not become a stronger claim.
+- Treat Phrasebank examples as rhetorical patterns, not facts or ready-made conclusions.
 - Add source URLs and attribution when changing upstream-derived references.
-- Keep the hand-maintained `academic-phrasebank-skill/references/revision-framework.md` separate from generated files.
-- Do not add credentials, personal data, or unrelated artifacts to the repository or release package.
+- Keep `revision-framework.md` separate from generated references; the builder must preserve it.
+- Do not add credentials, personal data, confidential manuscripts, or unrelated artifacts.
 
 ## Local checks
 
-Run the relevant checks before opening a pull request:
+Run the checks that match the changed area:
 
 ```bash
 python3 /Users/dawud/.agents/skills/skill-creator/scripts/quick_validate.py academic-phrasebank-skill
@@ -35,15 +35,8 @@ python3 -m py_compile tools/build_phrasebank_refs.py tools/validate_skill_packag
 git diff --check
 ```
 
-If generated references change, run `python3 tools/build_phrasebank_refs.py` and inspect the manifest and source coverage. If the user package changes, run `python3 tools/build_release.py` and verify the archive checksums.
+If generated references change, run `python3 tools/build_phrasebank_refs.py` and inspect the source coverage and diff. If the installable package changes, run `python3 tools/build_release.py` and inspect the archive checksums.
 
 ## Pull requests
 
-Use a clear title and explain:
-
-- the user problem and resulting behavior;
-- the files or reference sources affected;
-- the checks you ran; and
-- any compatibility or attribution considerations.
-
-Keep the pull request focused. Update the changelog when the change affects users.
+Describe the user problem and resulting behavior first. Then identify the affected files or source pages, checks run, and any compatibility or attribution considerations. Update [CHANGELOG.md](CHANGELOG.md) when the change affects users.

@@ -1,5 +1,7 @@
 # Source Coverage
 
+This file records the generated Phrasebank snapshot. The page files are pattern references, not evidence for a user's manuscript. Do not edit their phrase lines by hand; change the builder or the upstream extraction input instead.
+
 Source sitemap index: https://www.phrasebank.manchester.ac.uk/sitemap.xml
 
 ## Traversed Sitemaps

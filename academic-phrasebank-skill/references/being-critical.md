@@ -1,8 +1,20 @@
 # Being critical
 
-Source: https://www.phrasebank.manchester.ac.uk/being-critical/
+> Generated reference. Adapt these patterns to the user's claims; never treat the examples, placeholders, or named people as evidence.
 
-## Role in a Manuscript
+## Use This Page
+
+- **Route:** Use this page for a cross-section language function.
+- **Input:** Supply the user's concepts, evidence, section, and desired rhetorical move.
+- **Output:** Adapt a small number of patterns into connected prose, then check scope and evidence strength.
+- **Boundary:** Do not invent facts, citations, methods, results, or mechanisms to complete a pattern.
+
+## Source
+
+- URL: https://www.phrasebank.manchester.ac.uk/being-critical/
+- Snapshot: generated from the public source by `tools/build_phrasebank_refs.py`.
+
+## What This Page Covers
 
 - As an academic writer, you are expected to be critical of the sources that you use. This essentially means questioning what you read and not necessarily agreeing with it just because the information has been published. Being critical can also mean looking for reasons why we should not just accept something as being correct or true. This can require you to identify problems with a writer’s arguments or methods, or perhaps to refer to other people’s criticisms of these. Constructive criticism goes beyond this by suggesting ways in which a piece of research or writing could be improved.
 - … being against is not enough. We also need to develop habits of constructive thinking.

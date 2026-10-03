@@ -1,8 +1,20 @@
 # Classifying and listing
 
-Source: https://www.phrasebank.manchester.ac.uk/classifying-and-listing/
+> Generated reference. Adapt these patterns to the user's claims; never treat the examples, placeholders, or named people as evidence.
 
-## Role in a Manuscript
+## Use This Page
+
+- **Route:** Use this page for a cross-section language function.
+- **Input:** Supply the user's concepts, evidence, section, and desired rhetorical move.
+- **Output:** Adapt a small number of patterns into connected prose, then check scope and evidence strength.
+- **Boundary:** Do not invent facts, citations, methods, results, or mechanisms to complete a pattern.
+
+## Source
+
+- URL: https://www.phrasebank.manchester.ac.uk/classifying-and-listing/
+- Snapshot: generated from the public source by `tools/build_phrasebank_refs.py`.
+
+## What This Page Covers
 
 - When we classify things, we group and name them on the basis of something that they have in common. By doing this we can understand certain qualities and features which they share as a class. Classifying is also a way of understanding differences between things. In writing, classifying is often used as a way of introducing a reader to a new topic. Along with writing definitions, the function of classification may be used in the early part of an essay, or longer piece of writing. We list things when we want to treat and present a series of items or different pieces of information systematically. The order of a list may indicate rank importance.
 

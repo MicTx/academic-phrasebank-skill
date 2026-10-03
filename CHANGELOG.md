@@ -1,6 +1,13 @@
 # Changelog
 
-This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and uses semantic versioning for public releases.
+This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and semantic versioning. Entries describe user-visible changes; internal task-package steps belong in the repository history.
+
+## [Unreleased]
+
+### Added
+
+- Public introduction and step-by-step tutorial for postgraduate researchers and scientists.
+- Clearer documentation paths for installation, reference routing, validation, and release building.
 
 ## [0.1.0] - 2026-10-02
 

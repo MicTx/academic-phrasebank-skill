@@ -1,134 +1,141 @@
 # Multi-Level Manuscript Revision Framework
 
-Use this framework when the task is rewriting, polishing, language editing, paragraph repair, structural revision, or full manuscript diagnosis. Apply the highest level that the user's material requires before polishing lower levels.
+Use this file when a request involves more than one sentence or more than one kind of edit. The key question is not “which word sounds better?” It is “what does the reader need next, and which level owns that problem?”
+
+Work from the highest necessary level downward. Stop when the request is solved.
 
 ## Triage
 
-First classify the requested intervention.
+Choose one primary mode and add secondary modes only when the text requires them.
 
-- `write`: create new prose from notes, claims, results, or an outline.
-- `rewrite`: recast existing prose while preserving scientific meaning.
-- `polish`: improve clarity, grammar, style, concision, and academic register.
-- `line-edit`: revise sentence by sentence with a reason for each change when requested.
-- `style-unify`: harmonise terminology, stance, tense, voice, sentence rhythm, and academic register across the full text.
-- `restructure`: change order, section function, paragraph sequence, or argument architecture.
-- `diagnose`: identify problems without fully rewriting unless requested.
-- `mixed`: combine structural, paragraph, sentence, and phrase-level operations.
+- **Draft:** create prose from supplied claims, results, notes, or an outline.
+- **Translate:** move the text into academic English while preserving meaning and stance.
+- **Rewrite:** recast existing prose while retaining scientific meaning and scope.
+- **Polish:** improve grammar, clarity, concision, flow, and register.
+- **Line edit:** revise sentence by sentence and explain changes when requested.
+- **Restructure:** change section function, paragraph order, or argument architecture.
+- **Diagnose:** identify problems without rewriting unless requested.
+- **Style unify:** harmonise terminology, tense, voice, stance, rhythm, and register across the supplied text.
 
-If the user asks for comprehensive, carpet-style, exhaustive, full-manuscript, or multi-level work, run all passes below in order. For full-text polishing or style unification, create a style profile before editing and use it as the standard for the final sweep.
+A request for “full-manuscript” or “comprehensive” work means that all six revision passes below are relevant. It does not mean that every sentence needs the same amount of intervention.
 
 ## Style Profile
 
-Build this profile from the user's target journal, field, style sample, or the strongest existing parts of the manuscript. If no sample is available, infer a conservative SCI style and keep the profile explicit.
+Create this profile before broad rewriting. If no journal or sample is supplied, use the conservative defaults.
 
-- `register`: concise, formal, field-specific, and non-promotional.
-- `stance`: cautious for interpretation and implications; direct for methods and observed results.
-- `terminology`: choose one term for each concept and use it consistently, including abbreviations and plural forms.
-- `tense`: present tense for established knowledge and paper structure; past tense for completed methods and results; cautious modals for interpretation.
-- `voice`: prefer clear agent-action phrasing when it improves readability; keep passive voice when the method, result, or object is more important than the actor.
-- `citation stance`: keep author-prominent and information-prominent citation patterns consistent within each section.
-- `sentence rhythm`: vary length and opening patterns, but avoid abrupt shifts between dense technical prose and informal short claims.
-- `hedging strength`: keep uncertainty markers aligned with the evidence type, avoiding both overclaiming and excessive weakening.
+- **Register:** concise, formal, field-specific, and non-promotional.
+- **Stance:** direct for procedures and observations; cautious for interpretation, mechanisms, implications, and recommendations.
+- **Terminology:** one main term for each concept; define abbreviations once and reuse them.
+- **Tense:** present for established knowledge and paper structure; past for completed methods and results; cautious modals for interpretation.
+- **Voice:** use a clear agent-action sentence when it helps; retain passive voice when the object, procedure, or result is the focus.
+- **Citation stance:** keep author-prominent and information-prominent patterns consistent within a section.
+- **Sentence rhythm:** vary sentence length and openings without hiding the logical relation.
+- **Hedging strength:** match certainty to design, data, and analysis. Neither inflate nor blur the claim.
 
-Use the profile as a manuscript-wide constraint. Do not optimise individual sentences in a way that makes them stylistically inconsistent with surrounding paragraphs.
+Treat the profile as a manuscript-wide constraint. A locally elegant sentence is still wrong if it breaks the surrounding terminology or evidence stance.
 
 ## Pass 1: Manuscript Architecture
 
-Check whether the whole text has a coherent research story.
+First ask whether the whole text tells a traceable research story.
 
-- Confirm the central problem, research gap, objective, approach, key findings, and contribution are all visible.
-- Check whether each major section performs its expected role rather than repeating another section's job.
-- Detect missing logical links between literature gap, method choice, result interpretation, and contribution.
-- Remove or relocate content that interrupts the argument's progression.
-- Flag unsupported novelty, overclaimed significance, or causal claims not warranted by the evidence.
+Check for:
 
-Common operations: reorder sections, split overloaded sections, merge duplicated content, add missing transition logic, narrow claims, and align title/abstract/conclusion with the actual evidence.
+- a visible problem, gap, objective, approach, key findings, and contribution;
+- a distinct job for each major section;
+- links from literature gap to method choice, from method to result, and from result to contribution;
+- claims of novelty, significance, or causality that exceed the supplied evidence.
+
+Typical repairs include reordering sections, splitting overloaded sections, merging duplicated material, moving misplaced interpretation, narrowing claims, and aligning the title, abstract, introduction, discussion, and conclusion.
+
+Do not begin with sentence polishing when the reader cannot tell what the manuscript is trying to establish.
 
 ## Pass 2: Section Function
 
-Check each section against its rhetorical job.
+Check each section against its expected job.
 
-- Introduction: move from broad context to specific gap, objective, contribution, and paper structure.
-- Literature review: synthesize sources by theme and stance; do not list studies mechanically.
-- Methods: describe design, data, procedures, variables, analysis, and reproducibility conditions in a defensible order.
-- Results: report findings without premature interpretation; align text with tables, figures, and statistics.
-- Discussion: interpret findings through comparison, mechanism, implication, limitation, and uncertainty.
-- Conclusion: consolidate contribution, practical or theoretical value, limitations, and future work without introducing new evidence.
+- **Introduction:** move from context to gap, objective, contribution, and paper structure.
+- **Literature review:** synthesize sources by theme and stance; do not produce a study-by-study list without a reason.
+- **Methods:** make design, data, procedures, variables, analysis, and reproducibility conditions traceable.
+- **Results:** report findings in relation to tables, figures, and statistics without importing Discussion claims.
+- **Discussion:** interpret findings through comparison, possible explanation, implication, limitation, and uncertainty.
+- **Conclusion:** consolidate contribution and future work without introducing new evidence.
 
-Common operations: restore section purpose, remove misplaced interpretation, add missing citation stance, separate result reporting from discussion, and align subsection headings with content.
+Restore the section's job before improving its individual sentences.
 
 ## Pass 3: Paragraph Logic
 
-Check every paragraph as a local argument unit.
+Treat each paragraph as one local argument.
 
-- Ensure the first sentence signals the paragraph's controlling idea.
-- Keep one dominant function per paragraph: context, gap, method, result, interpretation, limitation, or implication.
-- Arrange sentences in a traceable order: claim, evidence, explanation, qualification, consequence, or transition.
-- Add bridges where the reader must infer why one sentence follows another.
-- Split paragraphs that contain multiple competing claims or mixed section functions.
-- Merge short fragments that repeat the same move or lack independent purpose.
+1. Open with a sentence that signals the paragraph's controlling idea.
+2. Keep one dominant function: context, gap, method, result, interpretation, limitation, or implication.
+3. Arrange sentences so the reader can trace claim, evidence, explanation, qualification, consequence, or transition.
+4. Add the bridge when the reader would otherwise have to infer why the next sentence follows.
+5. End with a useful consequence or transition when the paragraph leads to another claim.
 
-Common operations: rewrite topic sentences, reorder evidence, add linking phrases, remove circular restatement, split overloaded paragraphs, and strengthen paragraph-final takeaways.
+Split a paragraph when it contains competing functions. Merge fragments when they repeat the same move without an independent purpose.
 
 ## Pass 4: Sentence Expression
 
-Polish sentence-level academic English after the higher-level logic is sound.
+Only now polish sentence-level English.
 
-- Preserve variables, directionality, scope, magnitude, uncertainty, and methodological constraints.
-- Prefer concrete subjects and active analytical verbs when they improve clarity.
-- Reduce nominalisations and stacked modifiers when they obscure the scientific action.
-- Keep old-to-new information flow so each sentence starts from known context and advances the claim.
-- Vary sentence openings and lengths without sacrificing precision.
-- Replace vague connectors with logical relations such as contrast, cause, consequence, example, concession, or sequence.
-- Use cautious wording for mechanisms, interpretation, implications, and generalisation unless the evidence is decisive.
+- Preserve variables, directionality, magnitude, uncertainty, and methodological limits.
+- Prefer concrete subjects and analytical verbs when they make the action visible.
+- Reduce nominalisations and stacked modifiers that hide who did what.
+- Start from known information and move to the new claim.
+- Replace vague connectors with the actual relation: contrast, cause, consequence, example, concession, or sequence.
+- Shorten overloaded sentences; do not create a chain of polished fragments.
+- Keep Results and Methods direct; qualify mechanisms and implications.
 
-Common operations: shorten overloaded sentences, repair grammar, clarify referents, improve transitions, change passive to active where appropriate, and remove inflated or redundant wording.
+A smoother sentence is not an improvement if it quietly changes scope or evidence strength.
 
 ## Pass 5: Phrase And Register
 
-Apply phrasebank patterns only after selecting the intended rhetorical move.
+Select a Phrasebank pattern only after naming the rhetorical move.
 
-- Use phrase patterns as scaffolds for academic stance, not as reusable boilerplate.
-- Replace placeholders with the user's actual concepts only when the source text supports them.
-- Avoid repeating the same phrase frame across adjacent sentences or paragraphs.
-- Keep discipline-specific terminology, statistical wording, and citation details intact.
-- Do not invent references, datasets, results, effect sizes, journal names, or mechanisms.
+Use patterns to scaffold:
 
-Common operations: improve hedging, citation stance, comparison, trend description, quantity description, causality, definition, exemplification, and transitions.
+- gap and importance statements;
+- methods and design descriptions;
+- results, quantities, and trends;
+- comparison and causal qualification;
+- definitions and examples;
+- citation stance and transitions;
+- cautious interpretation and recommendations.
+
+Adapt the frame to the user's field and concepts. Do not repeat the same frame in adjacent sentences. Do not invent a reference, result, effect size, dataset, method, or mechanism to complete a template.
 
 ## Pass 6: Full-Text Consistency Sweep
 
-Run this pass after paragraph and sentence edits whenever the user provides multiple paragraphs, a section, or a full manuscript.
+Run this pass whenever the input contains multiple paragraphs, a section, or a manuscript.
 
-- Check whether the same concept is named consistently across the text.
-- Standardise abbreviations, units, statistical expressions, table and figure references, and section labels.
-- Align tense and voice with section function: methods and results should not drift into speculative discussion, and discussion should not report new results as if first observed there.
-- Make hedging consistent: association, mechanism, implication, recommendation, and generalisation should use different strength levels.
-- Smooth paragraph-to-paragraph transitions so the manuscript reads as one argument rather than separately polished fragments.
-- Remove repeated sentence templates introduced during line editing.
-- Harmonise citation stance, especially when moving between author-prominent literature review and information-prominent result interpretation.
-- Check that the abstract, introduction, discussion, and conclusion describe the contribution at the same strength and scope.
-
-Common operations: build a terminology map, normalise abbreviations, standardise tense and voice, adjust hedging strength, vary repeated sentence frames, align contribution claims, and rewrite transitions between edited units.
+- Map each concept to one term and one abbreviation.
+- Standardise units, statistical expressions, table/figure references, and section labels.
+- Align tense and voice with section function.
+- Keep association, mechanism, implication, recommendation, and generalisation at distinct strength levels.
+- Smooth transitions so separately edited paragraphs still form one argument.
+- Remove repeated sentence frames introduced during line editing.
+- Keep citation stance consistent within each section.
+- Ensure the abstract, introduction, discussion, and conclusion describe the contribution at the same scope.
 
 ## Output Patterns
 
-Choose the smallest output format that satisfies the request.
+Choose the smallest format that answers the request.
 
-- Full rewrite: provide the revised text, then a concise note on the main structural or logic changes.
-- Diagnostic review: list the highest-impact issues first, grouped by manuscript, section, paragraph, and sentence level.
-- Line edit: provide revised prose and, when useful, a compact table with `Original`, `Revised`, and `Reason`.
-- Style unification: provide a style profile, the unified prose or targeted edits, and a concise consistency note.
-- Multi-pass revision: show the pass order, then deliver the revised version or targeted edits for each pass.
-- Alternatives: offer two or three versions only when the user asks for tone, concision, or journal-style choices.
+- **Full rewrite:** revised text, then a concise note on structural or logic changes.
+- **Diagnostic review:** highest-impact issues first, grouped by manuscript, section, paragraph, and sentence level.
+- **Line edit:** revised prose and, when useful, a compact Original / Revised / Reason table.
+- **Style unification:** style profile, unified prose or targeted edits, and a short consistency note.
+- **Multi-pass revision:** state the pass order, then provide the revised text or targeted edits.
+- **Alternatives:** provide two or three versions only when the user asks for choices or materially different caution/length is defensible.
 
 ## Quality Gate
 
-Before returning the result, verify these points.
+Before returning the result, verify:
 
-- Scientific meaning, evidence strength, and uncertainty are preserved.
-- The highest-level problem visible in the text has been addressed before lower-level polishing.
-- Each paragraph has a clear function and internal logic.
-- Sentence revisions improve clarity without making unsupported claims.
-- Phrasebank patterns are adapted naturally rather than pasted mechanically.
-- Terminology, abbreviations, tense, citation stance, hedging strength, and contribution claims are consistent across the revised text.
+- scientific meaning, evidence strength, and uncertainty are preserved;
+- the highest visible problem was addressed before lower-level polishing;
+- each paragraph has a clear function and internal logic;
+- sentence changes improve clarity without making unsupported claims;
+- Phrasebank patterns are adapted naturally;
+- terminology, abbreviations, tense, citation stance, hedging, and contribution claims are consistent;
+- unresolved placeholders remain visible or are explicitly flagged.

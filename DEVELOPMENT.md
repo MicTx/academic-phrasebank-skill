@@ -1,25 +1,27 @@
 # Development Guide
 
-This guide covers repository maintenance for contributors.
+This guide is for maintaining the repository, rebuilding Phrasebank references, and producing a user archive. It does not change how the installed skill edits manuscripts.
 
 ## Requirements
 
 - Python 3.9 or newer.
 - Git.
-- The local `skill-creator` installation for the standard skill validator.
+- A local `skill-creator` installation for the standard frontmatter validator.
 - Network access only when rebuilding the upstream reference snapshot.
 
 ## Reference data
 
-Rebuild the local Phrasebank references with:
+Run:
 
 ```bash
 python3 tools/build_phrasebank_refs.py
 ```
 
-The builder stages raw pages, generated references, and the coverage manifest before replacing the existing generated trees. The hand-maintained `academic-phrasebank-skill/references/revision-framework.md` is preserved across rebuilds.
+The builder fetches sitemap pages, stages raw HTML and normalized references, validates the staged result, and replaces the generated trees as one rollback-capable operation. It preserves the hand-maintained `academic-phrasebank-skill/references/revision-framework.md`.
 
-## Validation
+Do not hand-edit generated Phrasebank phrase pages. If their structure needs to change, update the builder and rebuild so the source, generated output, and manifest stay aligned.
+
+## Validate a change
 
 ```bash
 python3 /Users/dawud/.agents/skills/skill-creator/scripts/quick_validate.py academic-phrasebank-skill
@@ -31,22 +33,26 @@ git diff --check
 
 Set `SKILL_CREATOR_DIR` when the local skill-creator installation is elsewhere.
 
-## Evaluation
+The validator checks package shape and release boundaries. The tests cover extraction and staging behavior. The compiler check catches Python syntax errors; it does not replace the tests.
 
-Evaluation prompts live in `academic-phrasebank-skill/evals/evals.json`. Keep evaluation workspaces outside the repository. Compare the current skill with a saved baseline, grade preservation and boundary assertions, and review the generated outputs before changing the skill again.
+## Evaluate the skill
+
+Evaluation prompts live in `academic-phrasebank-skill/evals/evals.json`. Keep evaluation workspaces outside the repository. Compare preservation of numbers, citations, scope, and evidence strength before changing the skill again.
 
 ## User package
-
-Build the user package with:
 
 ```bash
 python3 tools/build_release.py
 ```
 
-The builder validates the source, runs installation smoke tests, creates deterministic `.tar.gz` and `.zip` archives, checks archive contents and executable modes, and writes `SHA256SUMS` plus a manifest under `dist/`. User packages contain the installer, public documentation, attribution, changelog, and installable skill. Tests, evaluation prompts, raw source snapshots, manifests, and build tools stay in the source repository.
+The builder validates the source, runs installation smoke tests, creates deterministic `.tar.gz` and `.zip` archives, verifies archive contents and executable modes, and writes `SHA256SUMS` plus a release manifest under `dist/`.
+
+Release archives contain the installer, public project documents, attribution, changelog, and installable skill. They exclude `Agent.md`, development-only tools, tests, evaluation prompts, raw source snapshots, and processed manifests.
 
 ## Generated files
 
-- `data/raw/`: normalized upstream snapshots used to rebuild references.
+- `data/raw/`: normalized upstream HTML and sitemap snapshots.
 - `data/processed/manifest.json`: source coverage metadata.
-- `academic-phrasebank-skill/references/*.md`: generated page references plus hand-maintained workflow references.
+- `academic-phrasebank-skill/references/*.md`: generated page references plus the preserved hand-maintained workflow reference.
+
+When a rebuild fails, the previous successful outputs must remain intact. Inspect `git diff` before accepting any generated change.

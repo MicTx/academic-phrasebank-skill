@@ -1,8 +1,20 @@
 # Discussing findings
 
-Source: https://www.phrasebank.manchester.ac.uk/discussing-findings/
+> Generated reference. Adapt these patterns to the user's claims; never treat the examples, placeholders, or named people as evidence.
 
-## Role in a Manuscript
+## Use This Page
+
+- **Route:** Use this page for a core manuscript section.
+- **Input:** Supply the user's concepts, evidence, section, and desired rhetorical move.
+- **Output:** Adapt a small number of patterns into connected prose, then check scope and evidence strength.
+- **Boundary:** Do not invent facts, citations, methods, results, or mechanisms to complete a pattern.
+
+## Source
+
+- URL: https://www.phrasebank.manchester.ac.uk/discussing-findings/
+- Snapshot: generated from the public source by `tools/build_phrasebank_refs.py`.
+
+## What This Page Covers
 
 - The term ‘discussion’ has a variety of meanings in English. In academic writing, however, it usually refers to two types of activity: a) considering both sides of an issue, or question before reaching a conclusion; b) considering the results of research and the implications of these. Discussion sections in dissertations and research articles are probably the most complex sections in terms of their elements. They normally centre around a ‘statement of result’ or an important ‘finding’. As there is usually more than one result, discussion sections are often structured into a series of discussion cycles. The most common elements in these cycles, and some of the language that is typically associated with them, are listed below. Note that when offering explanations and suggesting implications the language used is very tentative or cautious (refer to the section entitled Being cautious).
 

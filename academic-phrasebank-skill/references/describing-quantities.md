@@ -1,8 +1,20 @@
 # Describing quantities
 
-Source: https://www.phrasebank.manchester.ac.uk/describing-quantities/
+> Generated reference. Adapt these patterns to the user's claims; never treat the examples, placeholders, or named people as evidence.
 
-## Role in a Manuscript
+## Use This Page
+
+- **Route:** Use this page for a cross-section language function.
+- **Input:** Supply the user's concepts, evidence, section, and desired rhetorical move.
+- **Output:** Adapt a small number of patterns into connected prose, then check scope and evidence strength.
+- **Boundary:** Do not invent facts, citations, methods, results, or mechanisms to complete a pattern.
+
+## Source
+
+- URL: https://www.phrasebank.manchester.ac.uk/describing-quantities/
+- Snapshot: generated from the public source by `tools/build_phrasebank_refs.py`.
+
+## What This Page Covers
 
 - The language for writing about quantities can be a complex area for non-native speakers because there are many combinations of short grammar words, such as prepositions and pronouns, and these can easily be confused. Many of the phrases given below also contain approximators such as: nearly, approximately, over half, less than, just over.
 

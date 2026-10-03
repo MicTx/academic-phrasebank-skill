@@ -1,23 +1,55 @@
 # Academic Phrasebank Skill
 
-`academic-phrasebank-skill` is a Codex and Claude Code skill for editing English scientific manuscripts. It helps with drafting, translation, rewriting, polishing, structural revision, paragraph repair, diagnosis, and style unification while preserving the author's evidence and scientific meaning.
+`academic-phrasebank-skill` edits English scientific manuscripts. It can draft, translate, restructure, diagnose, or polish prose while keeping the author's evidence, terminology, citations, and uncertainty visible.
 
-## Features
+The central rule is simple: **make the language as clear as the evidence, and no stronger.** The bundled Phrasebank supplies rhetorical patterns. It does not supply facts for a manuscript.
 
-- Routes work to manuscript, section, paragraph, sentence, and phrase levels.
-- Preserves numbers, variables, terminology, citations, uncertainty, and evidence strength.
-- Provides section-specific and rhetorical-move-specific Phrasebank references.
-- Keeps user-facing releases free of development-only files and source snapshots.
+## Start here
+
+1. Install the skill with `./install.sh`.
+2. Invoke `$academic-phrasebank-skill` in a Codex or Claude Code session.
+3. State the task, manuscript section, protected content, and required output.
+
+```text
+$academic-phrasebank-skill
+Polish this Results paragraph. Preserve every number, citation, variable,
+and uncertainty marker. Do not add interpretation or references.
+```
+
+If the problem is unclear, ask for a diagnosis first:
+
+```text
+$academic-phrasebank-skill
+Diagnose this Discussion section at manuscript, section, paragraph,
+sentence, and phrase levels. Do not rewrite it yet. Keep [REF] unchanged.
+```
+
+## What it protects
+
+- Numbers, units, variables, statistical notation, sample sizes, and directions.
+- Terminology, abbreviations, named methods, citations, and placeholders such as `[REF]`.
+- The difference between an observation, an association, a possible mechanism, an implication, and a recommendation.
+- The stated scope of the sample, design, and evidence.
+
+The skill does not invent results, mechanisms, methods, references, or statistics. It does not turn `X`, `Smith`, or `Jones` from a Phrasebank example into a fact about a user's study.
+
+## Choose the right guide
+
+- [Introduction](academic-phrasebank-skill/docs/introduction.md) explains the skill's purpose and boundary.
+- [Tutorial](academic-phrasebank-skill/docs/tutorial.md) walks through a constrained Results revision.
+- [Skill contract](academic-phrasebank-skill/SKILL.md) is the execution contract used by the model.
+- [Reference index](academic-phrasebank-skill/references/index.md) routes a task to the smallest useful reference file.
+- [Revision framework](academic-phrasebank-skill/references/revision-framework.md) defines the multi-level revision passes.
 
 ## Installation
 
-Run the installer from the repository or a release archive:
+Run the installer from this repository or from a release archive:
 
 ```bash
 ./install.sh
 ```
 
-The installer targets both Codex and Claude Code by default. Use environment variables for an isolated installation:
+By default it installs to both Codex and Claude Code. Use separate directories for a smoke test:
 
 ```bash
 CODEX_SKILLS_DIR=/tmp/academic-phrasebank-codex \
@@ -25,36 +57,22 @@ CLAUDE_SKILLS_DIR=/tmp/academic-phrasebank-claude \
 ./install.sh
 ```
 
-Invoke the skill as `$academic-phrasebank-skill`.
-
-## Usage
-
-Give the skill the manuscript text and describe the requested intervention. Examples:
-
-```text
-$academic-phrasebank-skill Polish this Results paragraph. Preserve every number and citation, and avoid adding interpretation.
-```
-
-```text
-$academic-phrasebank-skill Rewrite this Discussion section. Separate observed results, interpretation, limitations, and implications.
-```
-
-The skill treats the bundled Phrasebank as a rhetorical pattern library. It does not create references, results, methods, mechanisms, or scientific claims that are absent from the input.
+The installable skill keeps the name `academic-phrasebank-skill`.
 
 ## Reference source
 
-The bundled references are generated from the public [Manchester Academic Phrasebank](https://www.phrasebank.manchester.ac.uk/about-academic-phrasebank/) published by the University of Manchester. The included pages and source URLs are listed in [`academic-phrasebank-skill/references/source-coverage.md`](academic-phrasebank-skill/references/source-coverage.md).
+The references are generated from the public [Manchester Academic Phrasebank](https://www.phrasebank.manchester.ac.uk/about-academic-phrasebank/) published by the University of Manchester. [Source coverage](academic-phrasebank-skill/references/source-coverage.md) records the fetched pages, exclusions, counts, and source URLs.
 
-Phrasebank-derived material remains upstream material. See [`NOTICE.md`](NOTICE.md) before redistributing or modifying it.
+Use a reference page as a pattern library for a rhetorical move. Adapt its frame to the user's claims; never treat its examples as evidence. See [NOTICE.md](NOTICE.md) before redistributing or modifying upstream-derived material.
 
 ## Help and contribution
 
-- [`SUPPORT.md`](SUPPORT.md): usage questions and issue reporting.
-- [`SECURITY.md`](SECURITY.md): private vulnerability reporting.
-- [`CHANGELOG.md`](CHANGELOG.md): versioned changes.
-
-Contributors can find `CONTRIBUTING.md` and `DEVELOPMENT.md` in the source repository.
+- [Support](SUPPORT.md) explains what to include in a usage question or bug report.
+- [Security policy](SECURITY.md) explains private vulnerability reporting.
+- [Contributing](CONTRIBUTING.md) lists content rules and pull-request checks.
+- [Development guide](DEVELOPMENT.md) describes reference rebuilds, validation, and release builds.
+- [Changelog](CHANGELOG.md) records public changes.
 
 ## License
 
-Original project code and documentation are licensed under the Apache License, Version 2.0. See [`LICENSE`](LICENSE) and [`NOTICE.md`](NOTICE.md).
+Original project code, installer, and project documentation are licensed under the Apache License, Version 2.0. Phrasebank-derived material remains upstream material; attribution and source information are in [NOTICE.md](NOTICE.md).

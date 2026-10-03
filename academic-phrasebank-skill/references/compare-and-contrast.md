@@ -1,8 +1,20 @@
 # Compare and contrast
 
-Source: https://www.phrasebank.manchester.ac.uk/compare-and-contrast/
+> Generated reference. Adapt these patterns to the user's claims; never treat the examples, placeholders, or named people as evidence.
 
-## Role in a Manuscript
+## Use This Page
+
+- **Route:** Use this page for a cross-section language function.
+- **Input:** Supply the user's concepts, evidence, section, and desired rhetorical move.
+- **Output:** Adapt a small number of patterns into connected prose, then check scope and evidence strength.
+- **Boundary:** Do not invent facts, citations, methods, results, or mechanisms to complete a pattern.
+
+## Source
+
+- URL: https://www.phrasebank.manchester.ac.uk/compare-and-contrast/
+- Snapshot: generated from the public source by `tools/build_phrasebank_refs.py`.
+
+## What This Page Covers
 
 - By understanding similarities and differences between two things, we can increase our understanding and learn more about both. This usually involves a process of analysis, in which we compare the specific parts as well as the whole. Comparison may also be a preliminary stage of evaluation. For example, by comparing specific aspects of A and B, we can decide which is more useful or valuable. Many paragraphs whose function is to compare or contrast will begin with an introductory sentence expressed in general terms.
 

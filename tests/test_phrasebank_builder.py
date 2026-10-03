@@ -90,6 +90,10 @@ class PhrasebankStagingTests(unittest.TestCase):
             self.assertTrue((stage / "raw" / "example.html").exists())
             self.assertTrue((stage / "references" / "example.md").exists())
             self.assertTrue((stage / "processed" / "manifest.json").exists())
+            rendered = (stage / "references" / "example.md").read_text(encoding="utf-8")
+            self.assertIn("## Use This Page", rendered)
+            self.assertIn("## Source", rendered)
+            self.assertIn("Do not invent facts", rendered)
 
     def test_commit_staged_outputs_preserves_all_live_trees_on_swap_failure(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

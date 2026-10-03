@@ -1,8 +1,20 @@
 # Giving examples
 
-Source: https://www.phrasebank.manchester.ac.uk/giving-examples/
+> Generated reference. Adapt these patterns to the user's claims; never treat the examples, placeholders, or named people as evidence.
 
-## Role in a Manuscript
+## Use This Page
+
+- **Route:** Use this page for a cross-section language function.
+- **Input:** Supply the user's concepts, evidence, section, and desired rhetorical move.
+- **Output:** Adapt a small number of patterns into connected prose, then check scope and evidence strength.
+- **Boundary:** Do not invent facts, citations, methods, results, or mechanisms to complete a pattern.
+
+## Source
+
+- URL: https://www.phrasebank.manchester.ac.uk/giving-examples/
+- Snapshot: generated from the public source by `tools/build_phrasebank_refs.py`.
+
+## What This Page Covers
 
 - Writers may give specific examples as evidence to support their general claims or arguments. Examples can also be used to help the reader or listener understand unfamiliar or difficult concepts, and they tend to be easier to remember. For this reason, they are often used in teaching. Finally, students may be required to give examples in their work to demonstrate that they have understood a complex problem or concept. It is important to note that when statements are supported with examples, the explicit language signalling this may not always be used.
 

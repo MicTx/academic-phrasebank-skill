@@ -1,8 +1,20 @@
 # Being cautious
 
-Source: https://www.phrasebank.manchester.ac.uk/using-cautious-language/
+> Generated reference. Adapt these patterns to the user's claims; never treat the examples, placeholders, or named people as evidence.
 
-## Role in a Manuscript
+## Use This Page
+
+- **Route:** Use this page for a cross-section language function.
+- **Input:** Supply the user's concepts, evidence, section, and desired rhetorical move.
+- **Output:** Adapt a small number of patterns into connected prose, then check scope and evidence strength.
+- **Boundary:** Do not invent facts, citations, methods, results, or mechanisms to complete a pattern.
+
+## Source
+
+- URL: https://www.phrasebank.manchester.ac.uk/using-cautious-language/
+- Snapshot: generated from the public source by `tools/build_phrasebank_refs.py`.
+
+## What This Page Covers
 
 - One of the most noticeable stylistic aspects of academic communication is the tendency for writers to avoid expressing absolute certainty, where there may be a small degree of uncertainty, and to avoid making over-generalisations, where a small number of exceptions might exist. This means that there are many instances where the epistemological strength (strength of knowledge) of a statement or claim is mitigated (weakened) in some way. In the field of linguistics, devices for lessening the strength of a statement or claim are known as hedging devices.Analysis of research reports have shown that discussion sections tend to be particularly rich in hedging devices, particularly where writers are offering explanations for findings.
 

@@ -1,8 +1,20 @@
 # Signalling transition
 
-Source: https://www.phrasebank.manchester.ac.uk/signalling-transition/
+> Generated reference. Adapt these patterns to the user's claims; never treat the examples, placeholders, or named people as evidence.
 
-## Role in a Manuscript
+## Use This Page
+
+- **Route:** Use this page for a cross-section language function.
+- **Input:** Supply the user's concepts, evidence, section, and desired rhetorical move.
+- **Output:** Adapt a small number of patterns into connected prose, then check scope and evidence strength.
+- **Boundary:** Do not invent facts, citations, methods, results, or mechanisms to complete a pattern.
+
+## Source
+
+- URL: https://www.phrasebank.manchester.ac.uk/signalling-transition/
+- Snapshot: generated from the public source by `tools/build_phrasebank_refs.py`.
+
+## What This Page Covers
 
 - Previewing what is to follow in a paper or dissertation is like showing a map to a driver; it enables them to see where they are going. So it is useful to think of a preview section as a ‘road map’ for the reader. It must be accurate, but it must be easy to follow.
 - Writers are also expected to indicate to the reader when they are moving from one topic to another, or from one section of text to another. These are known as transition statements and examples of these, together with some previewing statements, are given below.

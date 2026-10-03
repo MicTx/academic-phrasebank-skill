@@ -1,8 +1,20 @@
 # Writing conclusions
 
-Source: https://www.phrasebank.manchester.ac.uk/writing-conclusions/
+> Generated reference. Adapt these patterns to the user's claims; never treat the examples, placeholders, or named people as evidence.
 
-## Role in a Manuscript
+## Use This Page
+
+- **Route:** Use this page for a core manuscript section.
+- **Input:** Supply the user's concepts, evidence, section, and desired rhetorical move.
+- **Output:** Adapt a small number of patterns into connected prose, then check scope and evidence strength.
+- **Boundary:** Do not invent facts, citations, methods, results, or mechanisms to complete a pattern.
+
+## Source
+
+- URL: https://www.phrasebank.manchester.ac.uk/writing-conclusions/
+- Snapshot: generated from the public source by `tools/build_phrasebank_refs.py`.
+
+## What This Page Covers
 
 - Conclusions are shorter sections of academic texts which usually serve two functions. The first is to summarise and bring together the main areas covered in the writing, which might be called ‘looking back’; and the second is to give a final comment or judgement on this. The final comment may also include making suggestions for improvement and speculating on future directions.
 - In dissertations and research papers, conclusions tend to be more complex and will also include sections on the significance of the findings and recommendations for future work. Conclusions may be optional in research articles where consolidation of the study and general implications are covered in the Discussion section. However, they are usually expected in dissertations and essays.

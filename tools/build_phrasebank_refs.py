@@ -273,6 +273,8 @@ def write_catalog(
     lines = [
         "# Source Coverage",
         "",
+        "This file records the generated Phrasebank snapshot. The page files are pattern references, not evidence for a user's manuscript. Do not edit their phrase lines by hand; change the builder or the upstream extraction input instead.",
+        "",
         f"Source sitemap index: {SITEMAP_INDEX_URL}",
         "",
         "## Traversed Sitemaps",
@@ -302,14 +304,27 @@ def write_catalog(
 
 
 def write_page_reference(page: PageContent, refs_dir: Path = REF_DIR) -> None:
+    page_kind = "core manuscript section" if page.slug in CORE_SLUGS else "cross-section language function"
     lines = [
         f"# {page.title}",
         "",
-        f"Source: {page.url}",
+        "> Generated reference. Adapt these patterns to the user's claims; never treat the examples, placeholders, or named people as evidence.",
+        "",
+        "## Use This Page",
+        "",
+        f"- **Route:** Use this page for a {page_kind}.",
+        "- **Input:** Supply the user's concepts, evidence, section, and desired rhetorical move.",
+        "- **Output:** Adapt a small number of patterns into connected prose, then check scope and evidence strength.",
+        "- **Boundary:** Do not invent facts, citations, methods, results, or mechanisms to complete a pattern.",
+        "",
+        "## Source",
+        "",
+        f"- URL: {page.url}",
+        "- Snapshot: generated from the public source by `tools/build_phrasebank_refs.py`.",
         "",
     ]
     if page.summary:
-        lines.extend(["## Role in a Manuscript", ""])
+        lines.extend(["## What This Page Covers", ""])
         for item in page.summary:
             lines.append(f"- {md_escape(item)}")
         lines.append("")
@@ -352,11 +367,17 @@ def write_index(pages: list[PageContent], refs_dir: Path = REF_DIR) -> None:
     lines = [
         "# Phrasebank Reference Index",
         "",
-        "Load only the file that matches the manuscript task. Use these references as phrase-pattern evidence, not as text to paste wholesale.",
+        "Route by the job the sentence must perform. Load the smallest useful file, adapt its patterns to the user's claims, and then run the evidence check. These files are phrase-pattern references, not a source of scientific facts.",
+        "",
+        "## Routing in three questions",
+        "",
+        "1. **Where is the passage?** Choose a core manuscript section below.",
+        "2. **What must the passage do?** Add a language-function page only when the section page does not cover the move.",
+        "3. **What must remain true?** Keep the user's numbers, terminology, citations, uncertainty, and scope; never fill a missing fact from an example.",
         "",
         "## Revision Framework",
         "",
-        "- `revision-framework.md`: Multi-level manuscript rewriting, polishing, restructuring, diagnosis, paragraph logic repair, sentence-level editing, and full-manuscript revision workflow.",
+        "- `revision-framework.md`: Decide whether the problem is architectural, sectional, paragraph-level, sentence-level, or phrase-level, then apply the smallest sufficient pass.",
         "",
         "## Core Manuscript Sections",
         "",
@@ -368,7 +389,16 @@ def write_index(pages: list[PageContent], refs_dir: Path = REF_DIR) -> None:
     for page in pages:
         if page.slug not in CORE_SLUGS:
             lines.append(f"- `{page.slug}.md`: {page.title}")
-    lines.append("")
+    lines.extend(
+        [
+            "",
+            "## Safe use",
+            "",
+            "- Replace placeholders only when the user's text supplies the corresponding concept.",
+            "- Keep source examples such as `X`, `Smith`, and `Jones` visibly generic.",
+            "- A fluent pattern does not validate a claim; compare every revised sentence with the supplied evidence.",
+        ]
+    )
     (refs_dir / "index.md").write_text("\n".join(lines), encoding="utf-8")
 
 

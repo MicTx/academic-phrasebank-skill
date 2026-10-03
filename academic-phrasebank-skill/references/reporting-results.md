@@ -1,8 +1,20 @@
 # Reporting results
 
-Source: https://www.phrasebank.manchester.ac.uk/reporting-results/
+> Generated reference. Adapt these patterns to the user's claims; never treat the examples, placeholders, or named people as evidence.
 
-## Role in a Manuscript
+## Use This Page
+
+- **Route:** Use this page for a core manuscript section.
+- **Input:** Supply the user's concepts, evidence, section, and desired rhetorical move.
+- **Output:** Adapt a small number of patterns into connected prose, then check scope and evidence strength.
+- **Boundary:** Do not invent facts, citations, methods, results, or mechanisms to complete a pattern.
+
+## Source
+
+- URL: https://www.phrasebank.manchester.ac.uk/reporting-results/
+- Snapshot: generated from the public source by `tools/build_phrasebank_refs.py`.
+
+## What This Page Covers
 
 - The standard approach to this section of a research article or dissertation is to present and describe the results in a systematic and detailed way. When reporting qualitative results, the researcher will highlight and comment on the themes that emerge from the analysis. These comments will often be illustrated with excerpts from the raw data. In text based studies, this may comprise quotations from primary sources. In quantitative studies, the results section is likely to consist of tables and figures, and writers comment on the significant data shown in these. This often takes the form of the location or summary statement, which identifies the table or figure and indicates its content, and a highlighting statement or statements, which point out and describe the relevant or significant data. All figures and tables should be numbered and given a title. More elaborate commentary on the results is normally restricted to the Discussion section. In research articles, however, authors may comment extensively on their results as they are presented, and it is not uncommon for the Results section to be combined with the Discussion section under the heading: Results and Discussion.
 
