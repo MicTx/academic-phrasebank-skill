@@ -17,7 +17,7 @@ Run:
 python3 tools/build_phrasebank_refs.py
 ```
 
-The builder fetches sitemap pages, stages raw HTML and normalized references, validates the staged result, and replaces the generated trees as one rollback-capable operation. It preserves the hand-maintained `academic-phrasebank-skill/references/revision-framework.md`.
+The builder fetches sitemap pages, checks URL classification and phrase-group completeness before staging raw HTML and normalized references, then replaces the generated trees as one rollback-capable operation. It preserves the hand-maintained `academic-phrasebank-skill/references/revision-framework.md`.
 
 Do not hand-edit generated Phrasebank phrase pages. If their structure needs to change, update the builder and rebuild so the source, generated output, and manifest stay aligned.
 
