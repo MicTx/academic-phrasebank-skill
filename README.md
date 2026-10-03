@@ -1,5 +1,7 @@
 # Academic Phrasebank Skill
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 `academic-phrasebank-skill` edits English scientific manuscripts. It can draft, translate, restructure, diagnose, or polish prose while keeping the author's evidence, terminology, citations, and uncertainty visible.
 
 The central rule is simple: **make the language as clear as the evidence, and no stronger.** The bundled Phrasebank supplies rhetorical patterns. It does not supply facts for a manuscript.

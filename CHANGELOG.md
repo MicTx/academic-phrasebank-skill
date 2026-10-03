@@ -8,6 +8,7 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) an
 
 - Public introduction and step-by-step tutorial for postgraduate researchers and scientists.
 - Clearer documentation paths for installation, reference routing, validation, and release building.
+- English and Simplified Chinese README entry points with matching language links in source and release archives.
 
 ## [0.1.0] - 2026-10-02
 
