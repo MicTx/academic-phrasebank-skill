@@ -1,11 +1,11 @@
 # Academic Phrasebank Skill
 
+`academic-phrasebank-skill` 是面向 Codex 和 Claude Code、以证据为边界的科研英语编辑 skill。
+
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![Release](https://img.shields.io/github/v/release/MicTx/academic-phrasebank-skill)](https://github.com/MicTx/academic-phrasebank-skill/releases/latest)
-
-`academic-phrasebank-skill` 是面向 Codex 和 Claude Code、以证据为边界的科研英语编辑 skill。
 
 它可以起草、翻译、重构、诊断和润色科研手稿，同时保留作者的证据、术语、引用和不确定性。
 

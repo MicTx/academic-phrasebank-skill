@@ -1,11 +1,11 @@
 # Academic Phrasebank Skill
 
+`academic-phrasebank-skill` is an evidence-preserving scientific English editor for Codex and Claude Code.
+
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![Release](https://img.shields.io/github/v/release/MicTx/academic-phrasebank-skill)](https://github.com/MicTx/academic-phrasebank-skill/releases/latest)
-
-`academic-phrasebank-skill` is an evidence-preserving scientific English editor for Codex and Claude Code.
 
 It drafts, translates, restructures, diagnoses, and polishes scientific manuscripts while keeping the author's evidence, terminology, citations, and uncertainty visible.
 
