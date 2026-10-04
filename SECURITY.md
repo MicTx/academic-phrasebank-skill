@@ -6,7 +6,7 @@ Security fixes target the latest commit on `main` and the latest published relea
 
 ## Reporting a vulnerability
 
-Do not open a public issue for a suspected vulnerability. Use GitHub's private security reporting feature. If it is unavailable, contact the maintainers privately through the repository host.
+Do not open a public issue for a suspected vulnerability. Report it privately through [GitHub's private security reporting](https://github.com/MicTx/academic-phrasebank-skill/security/advisories/new) (the repository's `/security` page). If that path is unavailable, contact the maintainers privately through the repository host.
 
 Include:
 

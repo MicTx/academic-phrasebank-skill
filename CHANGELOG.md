@@ -4,11 +4,20 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) an
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-04
+
 ### Added
 
 - Public introduction and step-by-step tutorial for postgraduate researchers and scientists.
 - Clearer documentation paths for installation, reference routing, validation, and release building.
 - English and Simplified Chinese README entry points with matching language links in source and release archives.
+- Repository facade polish: license and release badges, topic tags, enabled Discussions for usage questions, and a social preview source image.
+
+### Changed
+
+- Replaced the hand-written code of conduct with the Contributor Covenant 2.1.
+- SECURITY.md now links the private `/security` reporting page directly.
+- Issue-template question triage now points to the Discussions Q&A category.
 
 ## [0.1.0] - 2026-10-02
 
@@ -28,4 +37,6 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) an
 
 - Cleaned malformed inline HTML extraction and hidden layout markers in generated references.
 
-[0.1.0]: https://github.com/MicTx/academic-phrasebank-skill/releases
+[Unreleased]: https://github.com/MicTx/academic-phrasebank-skill/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/MicTx/academic-phrasebank-skill/compare/v0.1.0...v0.1.1
+[0.1.0]: https://github.com/MicTx/academic-phrasebank-skill/releases/tag/v0.1.0

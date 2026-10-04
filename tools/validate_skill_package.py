@@ -150,7 +150,7 @@ def validate_repository_guidance() -> None:
             fail(f"NOTICE.md missing attribution term: {text}")
     for path, terms in {
         ROOT / "CONTRIBUTING.md": ["Local checks", "Pull requests"],
-        ROOT / "CODE_OF_CONDUCT.md": ["with respect", "harassment"],
+        ROOT / "CODE_OF_CONDUCT.md": ["Contributor Covenant", "harassment"],
         ROOT / "SECURITY.md": ["Reporting a vulnerability", "public issue"],
         ROOT / "SUPPORT.md": ["Usage questions", "Bug reports", "SECURITY.md"],
         ROOT / "DEVELOPMENT.md": ["Reference data", "User package"],

@@ -90,7 +90,7 @@ followed by one short note if an ambiguity must remain visible.
 
 > This study used a random forest (RF) to assess urban heat-island intensity. The results showed a positive correlation between nighttime land-surface temperature and building density (r = 0.62, p < 0.001), but this correlation does not establish that building density causes stronger heat-island effects. Because the sample covered only three districts in summer, whether the findings generalise to other seasons and regions requires further validation (see [REF]).
 
-The verbs used, showed, and requires report method, result, and remaining uncertainty. Translation checks information relations, not word-for-word matching.
+译文里 used、showed 和 requires 分别承担方法、结果和遗留不确定性的措辞。翻译检查的是信息关系是否保留，不是逐词对应。
 
 ## 6. Discussion 先分动作，再修句子
 
