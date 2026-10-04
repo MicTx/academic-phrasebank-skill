@@ -4,6 +4,10 @@ This project follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) an
 
 ## [Unreleased]
 
+### Changed
+
+- Switched to a Chinese-primary README layout: `README.md` is now the Simplified Chinese entry point and `README.en.md` is the English edition, matching the bilingual repository description.
+
 ## [0.1.1] - 2026-10-04
 
 ### Added

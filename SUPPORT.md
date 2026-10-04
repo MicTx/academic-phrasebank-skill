@@ -4,7 +4,7 @@ Use this page to choose the right report. Remove confidential manuscript content
 
 ## Usage questions
 
-Read [README.md](README.md), [introduction.md](academic-phrasebank-skill/docs/introduction.md), and the skill instructions first. If the answer is still unclear, include:
+Read [README.en.md](README.en.md) (or [README.md](README.md) for Simplified Chinese), [introduction.md](academic-phrasebank-skill/docs/introduction.md), and the skill instructions first. If the answer is still unclear, include:
 
 - the exact task prompt;
 - the relevant manuscript section or a minimal redacted example; and

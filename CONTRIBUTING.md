@@ -4,7 +4,7 @@ Contributions should make the skill more useful, more accurate, or easier to ins
 
 ## Before editing
 
-Read [README.md](README.md), [DEVELOPMENT.md](DEVELOPMENT.md), and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). Open an issue for a substantial behavior change so the intended user outcome is recorded before implementation. Create a topic branch from `main`, and keep unrelated work on separate branches.
+Read [README.en.md](README.en.md) (or [README.md](README.md) for Simplified Chinese), [DEVELOPMENT.md](DEVELOPMENT.md), and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). Open an issue for a substantial behavior change so the intended user outcome is recorded before implementation. Create a topic branch from `main`, and keep unrelated work on separate branches.
 
 ## Repository map
 

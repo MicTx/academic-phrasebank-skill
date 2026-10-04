@@ -1,24 +1,24 @@
 # Academic Phrasebank Skill
 
-`academic-phrasebank-skill` is an evidence-preserving scientific English editor for Codex and Claude Code.
+`academic-phrasebank-skill` 是面向 Codex 和 Claude Code、以证据为边界的科研英语编辑 skill。
 
-[English](README.md) | [简体中文](README.zh-CN.md)
+[English](README.en.md) | [简体中文](README.md)
 
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![Release](https://img.shields.io/github/v/release/MicTx/academic-phrasebank-skill)](https://github.com/MicTx/academic-phrasebank-skill/releases/latest)
 
-It drafts, translates, restructures, diagnoses, and polishes scientific manuscripts while keeping the author's evidence, terminology, citations, and uncertainty visible.
+它可以起草、翻译、重构、诊断和润色科研手稿，同时保留作者的证据、术语、引用和不确定性。
 
-The central rule is simple: **make the language as clear as the evidence, and no stronger.** The bundled Phrasebank supplies rhetorical patterns. It does not supply facts for a manuscript.
+核心原则很简单：**让语言和证据一样清楚，但不要让语言比证据更强。** 内置 Phrasebank 提供修辞模式，不会为手稿提供事实。
 
 > [!WARNING]
-> This skill improves wording and structure. It does not verify results, create references, or strengthen claims beyond the supplied evidence.
+> 这个 skill 改善表达和结构，但不会核验研究结果、创建参考文献，也不会让论点强于已有证据。
 
-## Start here
+## 从这里开始
 
-1. Install the skill with `./install.sh`.
-2. Invoke `$academic-phrasebank-skill` in a Codex or Claude Code session.
-3. State the task, manuscript section, protected content, and required output.
+1. 使用 `./install.sh` 安装 skill。
+2. 在 Codex 或 Claude Code 会话中调用 `$academic-phrasebank-skill`。
+3. 说明任务、手稿章节、需要保护的内容和交付格式。
 
 ```text
 $academic-phrasebank-skill
@@ -26,7 +26,7 @@ Polish this Results paragraph. Preserve every number, citation, variable,
 and uncertainty marker. Do not add interpretation or references.
 ```
 
-If the problem is unclear, ask for a diagnosis first:
+如果还不清楚问题在哪一层，可以先请求诊断：
 
 ```text
 $academic-phrasebank-skill
@@ -34,32 +34,32 @@ Diagnose this Discussion section at manuscript, section, paragraph,
 sentence, and phrase levels. Do not rewrite it yet. Keep [REF] unchanged.
 ```
 
-## What it protects
+## 它会保护什么
 
-- Numbers, units, variables, statistical notation, sample sizes, and directions.
-- Terminology, abbreviations, named methods, citations, and placeholders such as `[REF]`.
-- The difference between an observation, an association, a possible mechanism, an implication, and a recommendation.
-- The stated scope of the sample, design, and evidence.
+- 数字、单位、变量、统计符号、样本量和方向。
+- 术语、缩写、方法名、引用和 `[REF]` 等占位符。
+- 观察、关联、可能机制、含义和建议之间的证据差异。
+- 样本、研究设计和证据支持的范围。
 
-The skill does not invent results, mechanisms, methods, references, or statistics. It does not turn `X`, `Smith`, or `Jones` from a Phrasebank example into a fact about a user's study.
+这个 skill 不会编造结果、机制、方法、参考文献或统计数据，也不会把 Phrasebank 示例中的 `X`、`Smith` 或 `Jones` 变成用户研究的事实。
 
-## Choose the right guide
+## 选择合适的指南
 
-- [Introduction](academic-phrasebank-skill/docs/introduction.md) explains the skill's purpose and boundary.
-- [Tutorial](academic-phrasebank-skill/docs/tutorial.md) walks through a constrained Results revision.
-- [Skill contract](academic-phrasebank-skill/SKILL.md) is the execution contract used by the model.
-- [Reference index](academic-phrasebank-skill/references/index.md) routes a task to the smallest useful reference file.
-- [Revision framework](academic-phrasebank-skill/references/revision-framework.md) defines the multi-level revision passes.
+- [中文介绍](academic-phrasebank-skill/docs/introduction.md) 说明 skill 的用途和边界。
+- [教程](academic-phrasebank-skill/docs/tutorial.md) 通过一个受约束的 Results 修改示例说明使用方法。
+- [Skill 契约](academic-phrasebank-skill/SKILL.md) 是模型执行任务时遵循的契约。
+- [参考索引](academic-phrasebank-skill/references/index.md) 将任务路由到最小的参考文件集合。
+- [修订框架](academic-phrasebank-skill/references/revision-framework.md) 定义多层次修订流程。
 
-## Installation
+## 安装
 
-Run the installer from this repository or from a release archive:
+可以从源码仓库或发布归档运行安装器：
 
 ```bash
 ./install.sh
 ```
 
-By default it installs to both Codex and Claude Code. Use separate directories for a smoke test:
+默认会同时安装到 Codex 和 Claude Code。可以使用独立目录进行 smoke test：
 
 ```bash
 CODEX_SKILLS_DIR=/tmp/academic-phrasebank-codex \
@@ -67,21 +67,21 @@ CLAUDE_SKILLS_DIR=/tmp/academic-phrasebank-claude \
 ./install.sh
 ```
 
-The installable skill keeps the name `academic-phrasebank-skill`.
+可安装的 skill 名称是 `academic-phrasebank-skill`。
 
-## Reference source
+## 参考来源
 
-The references are generated from the public [Manchester Academic Phrasebank](https://www.phrasebank.manchester.ac.uk/about-academic-phrasebank/) published by the University of Manchester. [Source coverage](academic-phrasebank-skill/references/source-coverage.md) records the fetched pages, exclusions, counts, and source URLs.
+参考页来自曼彻斯特大学公开发布的 [Manchester Academic Phrasebank](https://www.phrasebank.manchester.ac.uk/about-academic-phrasebank/)。[来源覆盖说明](academic-phrasebank-skill/references/source-coverage.md)记录抓取页面、排除项、数量和来源 URL。
 
-Use a reference page as a pattern library for a rhetorical move. Adapt its frame to the user's claims; never treat its examples as evidence. See [NOTICE.md](NOTICE.md) before redistributing or modifying upstream-derived material.
+参考页是修辞模式库，不是科学事实来源。应根据用户的论点改写模式，不能把示例当作证据。重新分发或修改上游材料前，请阅读 [NOTICE.md](NOTICE.md)。
 
-## Help and contribution
+## 帮助与贡献
 
-- [Support](SUPPORT.md) explains what to include in a usage question or bug report.
-- [Security policy](SECURITY.md) explains private vulnerability reporting.
-- Contributors can read `CONTRIBUTING.md` for content rules and pull-request checks, and `DEVELOPMENT.md` for reference rebuilds, validation, and release builds in the source repository.
-- [Changelog](CHANGELOG.md) records public changes.
+- [支持](SUPPORT.md) 说明使用问题或 bug 报告应包含哪些信息。
+- [安全策略](SECURITY.md) 说明如何私下报告漏洞。
+- 贡献者可以在源码仓库中阅读 `CONTRIBUTING.md` 了解内容规则和 pull request 检查，阅读 `DEVELOPMENT.md` 了解参考重建、校验和发布构建。
+- [变更日志](CHANGELOG.md) 记录公开变更。
 
-## License
+## 许可证
 
-Original project code, installer, and project documentation are licensed under the Apache License, Version 2.0. Phrasebank-derived material remains upstream material; attribution and source information are in [NOTICE.md](NOTICE.md).
+原始项目代码、安装器和项目文档采用 Apache License 2.0。Phrasebank 派生材料仍属于上游材料；归属与来源信息见 [NOTICE.md](NOTICE.md)。

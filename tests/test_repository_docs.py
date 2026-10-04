@@ -12,11 +12,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class RepositoryDocumentationTests(unittest.TestCase):
     def test_readmes_have_language_switch_and_shared_routes(self) -> None:
-        english = (ROOT / "README.md").read_text(encoding="utf-8")
-        chinese = (ROOT / "README.zh-CN.md").read_text(encoding="utf-8")
+        english = (ROOT / "README.en.md").read_text(encoding="utf-8")
+        chinese = (ROOT / "README.md").read_text(encoding="utf-8")
 
-        self.assertIn("[English](README.md) | [简体中文](README.zh-CN.md)", english)
-        self.assertIn("[English](README.md) | [简体中文](README.zh-CN.md)", chinese)
+        self.assertIn("[English](README.en.md) | [简体中文](README.md)", english)
+        self.assertIn("[English](README.en.md) | [简体中文](README.md)", chinese)
         for text in (english, chinese):
             first = next(line for line in text.splitlines() if line and not line.startswith("#"))
             self.assertLessEqual(len(first), 120)
@@ -37,7 +37,7 @@ class RepositoryDocumentationTests(unittest.TestCase):
             destination = Path(directory) / "release"
             build_release.copy_source(destination)
             self.assertTrue((destination / "README.md").is_file())
-            self.assertTrue((destination / "README.zh-CN.md").is_file())
+            self.assertTrue((destination / "README.en.md").is_file())
 
 
 if __name__ == "__main__":
